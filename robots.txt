@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://soulbody-studio-website.pages.dev/sitemap.xml
