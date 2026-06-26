@@ -1,11 +1,7 @@
 #
 # Cloudflare Pages 重定向规则
 # 语法：<来源> <目标> [状态码]
+#
 
-# 访问根域名时跳到首页（Pages 通常会自动服务 index.html，这行是兜底）
-# /  /index.html  200
-
-# 把不带 .html 的常见路径补全（SEO + 用户体验）
-/products    /products.html    200
-/about       /about.html       200
-/contact     /contact.html     200
+# www.yingyun-link.com 跳到主域（暂未启用域名，等接好域名后再打开）
+# https://www.yingyun-link.com/* https://yingyun-link.com/:splat 301!
