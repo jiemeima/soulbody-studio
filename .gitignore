@@ -58,3 +58,9 @@ package-lock.json
 *.webm
 *.flv
 *.wmv
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+!.env.example
