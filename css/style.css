@@ -2393,3 +2393,72 @@ img {
   .process-content small { margin-top: 10px; }
   .process-cta { align-items: flex-start; flex-direction: column; }
 }
+
+/* ========================================
+   全站询盘承接与需求评估表单
+   ======================================== */
+.conversion-bar {
+  position: fixed; z-index: 90; right: 24px; bottom: 24px;
+  display: flex; align-items: center; gap: 8px; padding: 9px;
+  border: 1px solid rgba(255,255,255,.13); border-radius: 8px;
+  background: rgba(10,34,44,.96); box-shadow: 0 18px 45px rgba(3,20,27,.28);
+  backdrop-filter: blur(14px);
+}
+.conversion-bar > span { display: grid; padding: 0 12px 0 7px; color: #fff; line-height: 1.3; }
+.conversion-bar b { font-size: 12px; font-weight: 650; }
+.conversion-bar small { color: rgba(255,255,255,.58); font-size: 10px; }
+.conversion-bar a,.conversion-bar button { padding: 10px 14px; border: 1px solid rgba(255,255,255,.16); border-radius: 4px; background: transparent; color: #fff; font: inherit; font-size: 12px; white-space: nowrap; cursor: pointer; }
+.conversion-bar .conversion-primary { border-color: var(--accent); background: var(--accent); color: #062a34; font-weight: 700; }
+.conversion-bar a:hover,.conversion-bar button:hover { transform: translateY(-1px); }
+
+.wechat-modal { position: fixed; z-index: 120; inset: 0; display: grid; place-items: center; padding: 24px; opacity: 0; visibility: hidden; transition: opacity .2s,visibility .2s; }
+.wechat-modal.active { opacity: 1; visibility: visible; }
+.wechat-modal-backdrop { position: absolute; inset: 0; background: rgba(4,18,23,.72); backdrop-filter: blur(5px); }
+.wechat-modal-panel { position: relative; width: min(390px,100%); padding: 30px; border-radius: 8px; background: #fff; box-shadow: 0 30px 80px rgba(0,0,0,.3); text-align: center; }
+.wechat-modal-panel > span { color: #08a766; font: 600 10px/1 Consolas,monospace; letter-spacing: .16em; }
+.wechat-modal-panel h2 { margin: 10px 0 18px; color: var(--primary); font-size: 26px; }
+.wechat-modal-panel img { display: block; width: min(280px,100%); margin: 0 auto; border: 1px solid #edf1f2; }
+.wechat-modal-panel p { margin: 16px 0 4px; color: var(--text); font-size: 13px; }
+.wechat-modal-panel small { color: var(--text-light); font-size: 11px; }
+.wechat-modal-close { position: absolute; top: 10px; right: 12px; width: 34px; height: 34px; border: 0; background: transparent; color: #6d7d83; font-size: 25px; cursor: pointer; }
+.modal-open { overflow: hidden; }
+
+.wechat-contact-card { display: grid; grid-template-columns: 150px 1fr; align-items: center; gap: 22px; margin-top: 28px; padding: 16px; border: 1px solid rgba(18,77,92,.12); border-radius: 6px; background: #fff; }
+.wechat-contact-card img { width: 150px; height: 150px; object-fit: cover; }
+.wechat-contact-card h4 { margin-bottom: 8px; color: var(--primary); font-size: 16px; }
+.wechat-contact-card p { margin: 0 0 7px; font-size: 12px; line-height: 1.65; }
+.wechat-contact-card small { color: #08a766; font-size: 10px; }
+
+.contact-conversion-grid { grid-template-columns: minmax(260px,.72fr) minmax(500px,1.28fr); align-items: start; gap: 64px; }
+.lead-form-card { padding: 38px; border: 1px solid rgba(18,77,92,.12); border-radius: 7px; background: #fff; box-shadow: 0 24px 60px rgba(10,42,52,.09); }
+.lead-form-head span { color: var(--accent-hover); font: 600 10px/1 Consolas,monospace; letter-spacing: .16em; }
+.lead-form-head h2 { margin: 12px 0 9px; color: var(--primary); font-size: clamp(24px,3vw,34px); }
+.lead-form-head p,.lead-form-note { color: var(--text-light); font-size: 12px; line-height: 1.7; }
+.lead-form { display: grid; gap: 18px; margin-top: 27px; }
+.lead-form-row { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; }
+.lead-form label { display: grid; gap: 8px; color: var(--primary); font-size: 12px; font-weight: 600; }
+.lead-form input,.lead-form select,.lead-form textarea { width: 100%; padding: 13px 14px; border: 1px solid #d8e1e4; border-radius: 4px; outline: none; background: #f8fafb; color: var(--text); font: inherit; font-size: 13px; transition: border-color .2s,box-shadow .2s; }
+.lead-form textarea { resize: vertical; min-height: 118px; line-height: 1.6; }
+.lead-form input:focus,.lead-form select:focus,.lead-form textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(47,196,229,.13); }
+.lead-consent { grid-template-columns: auto 1fr!important; align-items: start; gap: 9px!important; color: var(--text-light)!important; font-weight: 400!important; line-height: 1.5; }
+.lead-consent input { width: 15px; margin-top: 2px; }
+.lead-form-error { min-height: 18px; margin: -8px 0; color: #b53d3d; font-size: 12px; }
+.lead-form-actions { display: flex; align-items: center; gap: 12px; }
+.lead-form-actions button { cursor: pointer; }
+.lead-copy-btn { padding: 12px 16px; border: 0; background: transparent; color: #087e9b; font-size: 12px; }
+.lead-copy-btn:hover { color: var(--accent-hover); }
+
+@media (max-width: 900px) {
+  .contact-conversion-grid { grid-template-columns: 1fr; gap: 38px; }
+  .conversion-bar > span { display: none; }
+}
+@media (max-width: 640px) {
+  body { padding-bottom: 66px; }
+  .conversion-bar { right: 0; bottom: 0; left: 0; justify-content: stretch; padding: 8px 12px; border-radius: 0; }
+  .conversion-bar a,.conversion-bar button { flex: 1; padding: 10px 7px; text-align: center; }
+  .lead-form-card { padding: 28px 20px; }
+  .lead-form-row { grid-template-columns: 1fr; }
+  .lead-form-actions { align-items: stretch; flex-direction: column; }
+  .wechat-contact-card { grid-template-columns: 110px 1fr; gap: 15px; }
+  .wechat-contact-card img { width: 110px; height: 110px; }
+}

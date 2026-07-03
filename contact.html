@@ -84,7 +84,7 @@
 
   <!-- 联系内容 -->
   <section class="section">
-    <div class="contact-grid">
+    <div class="contact-grid contact-conversion-grid">
       <div class="contact-info reveal">
         <h2>获取联系</h2>
         <p>无论您是需要定制机器人服饰，还是了解产品方案，我们都将竭诚为您服务。</p>
@@ -116,6 +116,50 @@
             <p>周一至周五 8:00 - 17:30</p>
           </div>
         </div>
+
+        <div class="wechat-contact-card" id="wechat">
+          <img src="images/wechat-qr-soulbody.jpg" alt="灵躯工纺 Soulbody Studio 微信二维码" loading="lazy">
+          <div><h4>微信咨询</h4><p>扫码添加好友，发送机器人图片、尺寸或三维资料，可先做初步适配判断。</p><small>手机访问时可长按二维码识别</small></div>
+        </div>
+      </div>
+
+      <div class="lead-form-card reveal" id="assessment">
+        <div class="lead-form-head">
+          <span>FREE ASSESSMENT</span>
+          <h2>获取机器人软皮肤初步评估</h2>
+          <p>填写基础需求后，将自动整理为邮件。资料越完整，评估越准确。</p>
+        </div>
+        <form class="lead-form" id="lead-form" novalidate>
+          <div class="lead-form-row">
+            <label>公司 / 机构名称<input type="text" name="company" autocomplete="organization" placeholder="例如：某某机器人科技" required></label>
+            <label>联系人<input type="text" name="name" autocomplete="name" placeholder="您的姓名" required></label>
+          </div>
+          <div class="lead-form-row">
+            <label>联系电话<input type="tel" name="phone" autocomplete="tel" inputmode="tel" placeholder="手机或微信同号" required></label>
+            <label>联系邮箱<input type="email" name="email" autocomplete="email" placeholder="用于接收评估回复"></label>
+          </div>
+          <div class="lead-form-row">
+            <label>机器人类型
+              <select name="robotType" required>
+                <option value="">请选择</option>
+                <option>人形 / 具身机器人</option><option>服务 / 导览机器人</option>
+                <option>医疗康复 / 外骨骼</option><option>灵巧手 / 触觉研究</option>
+                <option>工业 / 巡检机器人</option><option>展演 / 品牌活动</option><option>其他</option>
+              </select>
+            </label>
+            <label>预计数量
+              <select name="quantity"><option>尚未确定</option><option>1–5 件研发样品</option><option>6–99 件小批量</option><option>100–1,000 件</option><option>1,000 件以上</option></select>
+            </label>
+          </div>
+          <label>需求说明<textarea name="requirements" rows="5" placeholder="建议填写：机器人型号、使用场景、需要包覆的部位、功能要求、期望时间；3D文件或照片可在邮件中作为附件补充。" required></textarea></label>
+          <label class="lead-consent"><input type="checkbox" name="consent" required> <span>同意灵躯工纺仅将以上信息用于本次需求沟通。</span></label>
+          <p class="lead-form-error" role="alert" aria-live="polite"></p>
+          <div class="lead-form-actions">
+            <button type="submit" class="btn btn-primary">整理需求并发送邮件</button>
+            <button type="button" class="lead-copy-btn" id="copy-lead">复制需求内容</button>
+          </div>
+          <p class="lead-form-note">提交后将打开您的邮件客户端，收件人为 sunny.xu@yingyun-link.com；通常 1 个工作日内回复。</p>
+        </form>
       </div>
     </div>
   </section>
