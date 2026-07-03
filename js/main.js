@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const conversionBar = document.createElement('aside');
   conversionBar.className = 'conversion-bar';
   conversionBar.setAttribute('aria-label', '快捷咨询');
-  conversionBar.innerHTML = '<span><b>有机器人图片或尺寸？</b><small>可先做免费适配判断</small></span><button type="button" class="conversion-wechat" data-conversion="wechat">微信咨询</button><a href="tel:13600595031" data-conversion="phone">电话咨询</a><a class="conversion-primary" href="contact.html#assessment" data-conversion="assessment">获取评估</a>';
+  conversionBar.innerHTML = '<span><b>有机器人图片或尺寸？</b><small>可先做免费适配判断</small></span><button type="button" class="conversion-wechat" data-conversion="wechat">微信咨询</button><button type="button" data-phone-trigger data-conversion="phone">电话咨询</button><a class="conversion-primary" href="contact.html#assessment" data-conversion="assessment">获取评估</a>';
   document.body.appendChild(conversionBar);
 
   const wechatModal = document.createElement('div');
@@ -44,6 +44,40 @@ document.addEventListener('DOMContentLoaded', function() {
   wechatModal.querySelectorAll('[data-wechat-close]').forEach(el => el.addEventListener('click', closeWechat));
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape' && wechatModal.classList.contains('active')) closeWechat();
+  });
+
+  // 电话咨询：电脑端显示并复制号码，手机端再提供系统拨号入口
+  const phoneModal = document.createElement('div');
+  phoneModal.className = 'phone-modal';
+  phoneModal.setAttribute('aria-hidden', 'true');
+  phoneModal.innerHTML = '<div class="phone-modal-backdrop" data-phone-close></div><div class="phone-modal-panel" role="dialog" aria-modal="true" aria-labelledby="phone-modal-title"><button type="button" class="phone-modal-close" data-phone-close aria-label="关闭电话咨询">×</button><span>PHONE CONTACT</span><h2 id="phone-modal-title">电话咨询</h2><strong>136 0059 5031</strong><p>工作时间：周一至周五 8:00–17:30</p><div class="phone-modal-actions"><button type="button" class="phone-copy">复制号码</button><a href="tel:13600595031" class="phone-call">一键拨号</a></div><small>电脑端请复制号码；手机端可点击一键拨号。</small></div>';
+  document.body.appendChild(phoneModal);
+  const phoneTriggers = document.querySelectorAll('[data-phone-trigger]');
+  const phoneClose = phoneModal.querySelector('.phone-modal-close');
+  const openPhone = function() {
+    phoneModal.classList.add('active');
+    phoneModal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('modal-open');
+    phoneClose.focus();
+  };
+  const closePhone = function() {
+    phoneModal.classList.remove('active');
+    phoneModal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('modal-open');
+  };
+  phoneTriggers.forEach(el => el.addEventListener('click', openPhone));
+  phoneModal.querySelectorAll('[data-phone-close]').forEach(el => el.addEventListener('click', closePhone));
+  phoneModal.querySelector('.phone-copy').addEventListener('click', async function() {
+    try {
+      if (navigator.clipboard && window.isSecureContext) await navigator.clipboard.writeText('13600595031');
+      else throw new Error('clipboard unavailable');
+      this.textContent = '号码已复制';
+    } catch (err) {
+      this.textContent = '请手动复制：13600595031';
+    }
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && phoneModal.classList.contains('active')) closePhone();
   });
   // 移动端菜单切换
   const mobileToggle = document.querySelector('.mobile-toggle');

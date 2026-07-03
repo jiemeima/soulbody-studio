@@ -2423,6 +2423,22 @@ img {
 .wechat-modal-close { position: absolute; top: 10px; right: 12px; width: 34px; height: 34px; border: 0; background: transparent; color: #6d7d83; font-size: 25px; cursor: pointer; }
 .modal-open { overflow: hidden; }
 
+.phone-modal { position: fixed; z-index: 121; inset: 0; display: grid; place-items: center; padding: 24px; opacity: 0; visibility: hidden; transition: opacity .2s,visibility .2s; }
+.phone-modal.active { opacity: 1; visibility: visible; }
+.phone-modal-backdrop { position: absolute; inset: 0; background: rgba(4,18,23,.72); backdrop-filter: blur(5px); }
+.phone-modal-panel { position: relative; width: min(390px,100%); padding: 34px 30px 30px; border-radius: 8px; background: #fff; box-shadow: 0 30px 80px rgba(0,0,0,.3); text-align: center; }
+.phone-modal-panel > span { color: var(--accent-hover); font: 600 10px/1 Consolas,monospace; letter-spacing: .16em; }
+.phone-modal-panel h2 { margin: 10px 0 18px; color: var(--primary); font-size: 26px; }
+.phone-modal-panel strong { display: block; color: var(--primary); font-size: 30px; letter-spacing: .06em; }
+.phone-modal-panel p { margin: 9px 0 20px; color: var(--text-light); font-size: 12px; }
+.phone-modal-panel small { display: block; margin-top: 13px; color: var(--text-light); font-size: 10px; }
+.phone-modal-close { position: absolute; top: 10px; right: 12px; width: 34px; height: 34px; border: 0; background: transparent; color: #6d7d83; font-size: 25px; cursor: pointer; }
+.phone-modal-actions { display: flex; justify-content: center; gap: 10px; }
+.phone-modal-actions button,.phone-modal-actions a { padding: 11px 18px; border: 1px solid var(--accent); border-radius: 4px; background: transparent; color: #087e9b; font: inherit; font-size: 12px; cursor: pointer; }
+.phone-modal-actions .phone-call { display: none; background: var(--accent); color: #062a34; font-weight: 700; }
+.inline-phone-trigger { padding: 0; border: 0; background: transparent; color: inherit; font: inherit; cursor: pointer; }
+.inline-phone-trigger:hover { color: var(--accent-hover); }
+
 .wechat-contact-card { display: grid; grid-template-columns: 150px 1fr; align-items: center; gap: 22px; margin-top: 28px; padding: 16px; border: 1px solid rgba(18,77,92,.12); border-radius: 6px; background: #fff; }
 .wechat-contact-card img { width: 150px; height: 150px; object-fit: cover; }
 .wechat-contact-card h4 { margin-bottom: 8px; color: var(--primary); font-size: 16px; }
@@ -2461,4 +2477,5 @@ img {
   .lead-form-actions { align-items: stretch; flex-direction: column; }
   .wechat-contact-card { grid-template-columns: 110px 1fr; gap: 15px; }
   .wechat-contact-card img { width: 110px; height: 110px; }
+  .phone-modal-actions .phone-call { display: inline-block; }
 }
