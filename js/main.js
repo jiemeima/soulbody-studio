@@ -13,7 +13,8 @@ document.addEventListener('DOMContentLoaded', function() {
     'solutions-humanoid-en.html': 'solutions-humanoid.html', 'products-en.html': 'products.html',
     'about-en.html': 'about.html', 'contact-en.html': 'contact.html', 'faq-en.html': 'faq.html'
   };
-  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  const pathPage = window.location.pathname.split('/').pop() || 'index.html';
+  const currentPage = pathPage.includes('.') ? pathPage : pathPage + '.html';
   const navContainer = document.querySelector('.nav-container');
   if (navContainer && languagePages[currentPage]) {
     const languageSwitch = document.createElement('a');
