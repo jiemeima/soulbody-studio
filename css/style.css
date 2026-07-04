@@ -656,6 +656,13 @@ html[lang="en"] .nav-menu a { font-size: 12px; }
   margin: 0 auto;
 }
 
+.product-card.banner-softskin .product-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
 .product-card.banner-softskin .product-info {
   padding: 40px 36px;
   display: flex;
