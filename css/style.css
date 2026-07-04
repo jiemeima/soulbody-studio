@@ -120,6 +120,29 @@ img {
   gap: clamp(20px, 2.6vw, 36px);
 }
 
+.language-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  flex: 0 0 auto;
+  margin-left: 18px;
+  padding: 8px 12px;
+  border: 1px solid rgba(255,255,255,.3);
+  border-radius: 3px;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-decoration: none;
+  transition: border-color .2s, background .2s, color .2s;
+}
+.language-switch span { color: var(--accent); font: 700 10px/1 Consolas, monospace; }
+.language-switch:hover { border-color: var(--accent); background: rgba(47,196,229,.09); }
+
+html[lang="en"] body { font-family: Inter, "Segoe UI", Arial, sans-serif; }
+html[lang="en"] .nav-menu { gap: 24px; }
+html[lang="en"] .nav-menu a { font-size: 12px; }
+
 .nav-menu a {
   color: var(--text-white);
   font-size: 15px;
@@ -840,6 +863,7 @@ img {
 }
 
 @media (max-width: 768px) {
+  .language-switch { margin-left: auto; margin-right: 14px; padding: 7px 9px; }
   .knit-banners-grid {
     grid-template-columns: 1fr;
     gap: 20px;
