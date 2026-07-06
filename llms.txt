@@ -1,6 +1,6 @@
 # llms.txt for SOULBODY STUDIO / 灵躯工纺工作室
 
-Site: https://soulbody-studio-website.pages.dev/
+Site: https://soulbody-studio.com/
 Name: 灵躯工纺工作室 / SOULBODY STUDIO
 Description: 灵躯工纺工作室专注机器人针织仿生软皮肤与机器人服饰定制，提供 Roboskin 机器人软皮肤、人形机器人外衣、医疗康复设备针织包覆、工业机器人特种服、导电纱线触觉电子皮肤等解决方案。
 
@@ -8,11 +8,11 @@ Core Positioning:
 灵躯工纺工作室是一家专注机器人针织仿生软皮肤与机器人服饰定制的技术型工作室，基于圣东尼无缝针织、3D 针织算版、功能纱线与导电纱线集成，为人形机器人、具身机器人、医疗康复设备、工业机器人提供可穿脱、可水洗、可快速打样的机器人软皮肤解决方案。
 
 Key Pages:
-- 首页: https://soulbody-studio-website.pages.dev/
-- 产品中心: https://soulbody-studio-website.pages.dev/products.html
-- 关于我们: https://soulbody-studio-website.pages.dev/about.html
-- 联系我们: https://soulbody-studio-website.pages.dev/contact.html
-- FAQ: https://soulbody-studio-website.pages.dev/faq.html
+- 首页: https://soulbody-studio.com/
+- 产品中心: https://soulbody-studio.com/products.html
+- 关于我们: https://soulbody-studio.com/about.html
+- 联系我们: https://soulbody-studio.com/contact.html
+- FAQ: https://soulbody-studio.com/faq.html
 
 Core Topics:
 - 机器人服饰

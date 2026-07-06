@@ -1,73 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://soulbody-studio-website.pages.dev/</loc>
+    <loc>https://soulbody-studio.com/</loc>
     <lastmod>2026-07-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://soulbody-studio-website.pages.dev/products</loc>
+    <loc>https://soulbody-studio.com/products</loc>
     <lastmod>2026-07-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://soulbody-studio-website.pages.dev/products-roboskin</loc>
+    <loc>https://soulbody-studio.com/products-roboskin</loc>
     <lastmod>2026-07-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://soulbody-studio-website.pages.dev/solutions-humanoid</loc>
+    <loc>https://soulbody-studio.com/solutions-humanoid</loc>
     <lastmod>2026-07-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://soulbody-studio-website.pages.dev/faq</loc>
+    <loc>https://soulbody-studio.com/faq</loc>
     <lastmod>2026-07-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://soulbody-studio-website.pages.dev/about</loc>
+    <loc>https://soulbody-studio.com/about</loc>
     <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://soulbody-studio-website.pages.dev/contact</loc>
+    <loc>https://soulbody-studio.com/contact</loc>
     <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://soulbody-studio-website.pages.dev/index-en</loc>
+    <loc>https://soulbody-studio.com/index-en</loc>
     <lastmod>2026-07-04</lastmod><changefreq>weekly</changefreq><priority>0.9</priority>
   </url>
   <url>
-    <loc>https://soulbody-studio-website.pages.dev/products-roboskin-en</loc>
+    <loc>https://soulbody-studio.com/products-roboskin-en</loc>
     <lastmod>2026-07-04</lastmod><changefreq>weekly</changefreq><priority>0.9</priority>
   </url>
   <url>
-    <loc>https://soulbody-studio-website.pages.dev/solutions-humanoid-en</loc>
+    <loc>https://soulbody-studio.com/solutions-humanoid-en</loc>
     <lastmod>2026-07-04</lastmod><changefreq>weekly</changefreq><priority>0.8</priority>
   </url>
   <url>
-    <loc>https://soulbody-studio-website.pages.dev/products-en</loc>
+    <loc>https://soulbody-studio.com/products-en</loc>
     <lastmod>2026-07-04</lastmod><changefreq>weekly</changefreq><priority>0.8</priority>
   </url>
   <url>
-    <loc>https://soulbody-studio-website.pages.dev/about-en</loc>
+    <loc>https://soulbody-studio.com/about-en</loc>
     <lastmod>2026-07-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
   </url>
   <url>
-    <loc>https://soulbody-studio-website.pages.dev/contact-en</loc>
+    <loc>https://soulbody-studio.com/contact-en</loc>
     <lastmod>2026-07-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
   </url>
   <url>
-    <loc>https://soulbody-studio-website.pages.dev/faq-en</loc>
+    <loc>https://soulbody-studio.com/faq-en</loc>
     <lastmod>2026-07-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
   </url>
 </urlset>
