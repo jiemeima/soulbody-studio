@@ -632,6 +632,51 @@ html[lang="en"] .nav-menu a { font-size: 12px; }
   gap: 30px;
 }
 
+/* 产品案例：旗舰横栏下方四张卡片采用 2 × 2 田字布局 */
+.products-case-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.products-case-grid .product-card:not(.banner-softskin) {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+
+.products-case-grid .product-card:not(.banner-softskin) .product-img {
+  flex: 0 0 250px;
+  overflow: hidden;
+}
+
+.products-case-grid .product-card:not(.banner-softskin) .product-img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.products-case-grid .product-card:not(.banner-softskin) .product-info {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  background: #fff;
+  color: var(--primary);
+}
+
+.products-case-grid .product-card:not(.banner-softskin) .product-info h3 {
+  color: var(--primary);
+}
+
+.products-case-grid .product-card:not(.banner-softskin) .product-info p {
+  color: var(--text-light);
+}
+
+@media (max-width: 700px) {
+  .products-case-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .product-card {
   background: var(--bg-white);
   border-radius: var(--radius-lg);
