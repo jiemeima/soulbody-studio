@@ -9,9 +9,11 @@ document.addEventListener('DOMContentLoaded', function() {
     'index.html': 'index-en.html', 'products-roboskin.html': 'products-roboskin-en.html',
     'solutions-humanoid.html': 'solutions-humanoid-en.html', 'products.html': 'products-en.html',
     'about.html': 'about-en.html', 'contact.html': 'contact-en.html', 'faq.html': 'faq-en.html',
+    'insights.html': 'insights-en.html',
     'index-en.html': 'index.html', 'products-roboskin-en.html': 'products-roboskin.html',
     'solutions-humanoid-en.html': 'solutions-humanoid.html', 'products-en.html': 'products.html',
     'about-en.html': 'about.html', 'contact-en.html': 'contact.html', 'faq-en.html': 'faq.html'
+    , 'insights-en.html': 'insights.html'
   };
   const pathPage = window.location.pathname.split('/').pop() || 'index.html';
   const currentPage = pathPage.includes('.') ? pathPage : pathPage + '.html';
