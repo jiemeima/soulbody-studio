@@ -5,3 +5,8 @@
 
 # www.yingyun-link.com 跳到主域（暂未启用域名，等接好域名后再打开）
 # https://www.yingyun-link.com/* https://yingyun-link.com/:splat 301!
+
+# Keep search-engine verification files available at their exact .html URLs.
+# Cloudflare Pages otherwise redirects HTML assets to extensionless routes.
+/googlec7d2ba05da5ce7ed.html /googlec7d2ba05da5ce7ed 200
+/baidu_verify_codeva-KFnPlw9bxE.html /baidu_verify_codeva-KFnPlw9bxE 200
