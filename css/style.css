@@ -1353,6 +1353,41 @@ html[lang="en"] .nav-menu a { font-size: 12px; }
   .hero-visual-index { left: 14px; right: 14px; font-size: 7px; }
 }
 
+/* Long-form technical articles */
+.article-page { padding-top: 70px; background: #f7f9f8; }
+.article-header { max-width: 1040px; margin: auto; padding: 90px 28px 58px; }
+.article-header > a { color: #27838c; font-size: 10px; font-weight: 700; letter-spacing: .16em; }
+.article-header h1 { margin: 25px 0; color: #103942; font-size: clamp(42px,6vw,76px); line-height: 1.08; letter-spacing: -.045em; }
+.article-header h1 em { color: #27929a; font-style: normal; }
+.article-lead { max-width: 800px; color: #566d72; font-size: 18px; line-height: 1.9; }
+.article-meta { display: flex; flex-wrap: wrap; gap: 24px; margin-top: 35px; color: #829094; font-size: 10px; }
+.article-cover { max-width: 1180px; margin: 0 auto 70px; padding: 0 28px; }
+.article-cover img { width: 100%; max-height: 660px; object-fit: cover; }
+.article-cover figcaption { margin-top: 12px; color: #839194; font-size: 10px; }
+.article-content { max-width: 780px; margin: auto; padding: 0 28px 90px; color: #40585d; font-size: 16px; line-height: 2; }
+.article-content h2 { margin: 62px 0 18px; color: #103942; font-size: 29px; line-height: 1.35; }
+.article-content strong { color: #164b55; }
+.article-content li { margin-bottom: 10px; }
+.article-summary,.article-note { margin: 0 0 55px; padding: 28px 30px; border-left: 3px solid #2a959c; background: #eaf3f2; }
+.article-summary b,.article-note b { color: #19737c; font-size: 11px; letter-spacing: .12em; }
+.article-summary p,.article-note p { margin: 8px 0 0; }
+.article-table { display: grid; grid-template-columns: repeat(3,1fr); margin: 30px 0; border-top: 1px solid #cbd9d8; border-left: 1px solid #cbd9d8; }
+.article-table div { min-height: 130px; padding: 20px; border-right: 1px solid #cbd9d8; border-bottom: 1px solid #cbd9d8; }
+.article-table b,.article-table span { display: block; }
+.article-table span { margin-top: 16px; color: #6c7d80; font-size: 12px; line-height: 1.7; }
+.article-checklist { display: grid; grid-template-columns: repeat(2,1fr); gap: 10px; margin: 24px 0 50px; }
+.article-checklist span { padding: 14px 16px; background: #edf2f1; font-size: 13px; }
+.article-action { margin-top: 60px; padding: 38px; color: #fff; background: #0b3038; }
+.article-action h2 { margin: 0 0 10px; color: #fff; }
+.article-action p { color: rgba(255,255,255,.68); }
+.article-action .btn { margin-top: 15px; }
+.article-related { display: grid; grid-template-columns: .45fr 1fr 1fr; gap: 1px; max-width: 1180px; margin: auto; padding: 0 28px 90px; }
+.article-related > * { padding: 26px; background: #e9f0ef; }
+.article-related > span { color: #27838c; font-size: 10px; letter-spacing: .12em; }
+.article-related a b,.article-related a small { display: block; color: #153f47; }
+.article-related a small { margin-top: 16px; color: #4e878c; }
+@media(max-width:700px){.article-table,.article-related,.article-checklist{grid-template-columns:1fr}.article-header{padding-top:65px}.article-content{font-size:15px}.article-cover{margin-bottom:50px}}
+
 @media (prefers-reduced-motion: reduce) {
   .hero.hero-split::after,
   .hero-badge::before { animation: none; }
