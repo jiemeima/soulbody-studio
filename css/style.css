@@ -2567,7 +2567,7 @@ html[lang="en"] .nav-menu a { font-size: 12px; }
 .insights-hero-card span { display: block; margin-bottom: 24px; color: #75d0d5; font-size: 9px; letter-spacing: .18em; }
 .insights-hero-card strong { display: block; font-size: 19px; line-height: 1.7; }
 .insights-hero-card a { display: inline-block; margin-top: 26px; color: #fff; font-size: 12px; }
-.insights-section { max-width: 1240px; }
+.insights-section { max-width: 1240px; margin-right: auto; margin-left: auto; }
 .insight-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px; }
 .insight-card { overflow: hidden; border: 1px solid rgba(18,77,92,.12); background: #fff; box-shadow: 0 18px 45px rgba(9,48,57,.06); }
 .insight-card-featured { grid-row: span 2; }
