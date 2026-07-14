@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://soulbody-studio.com/</loc>
     <lastmod>2026-07-06</lastmod>
@@ -72,13 +72,14 @@
   </url>
   <url>
     <loc>https://soulbody-studio.com/insights</loc>
-    <lastmod>2026-07-13</lastmod><changefreq>weekly</changefreq><priority>0.8</priority>
+    <lastmod>2026-07-14</lastmod><changefreq>weekly</changefreq><priority>0.8</priority>
+    <image:image><image:loc>https://soulbody-studio.com/images/robot-shoulder-yingyun.png</image:loc><image:title>机器人针织软皮肤行业洞察</image:title></image:image>
   </url>
   <url>
     <loc>https://soulbody-studio.com/insights-en</loc>
     <lastmod>2026-07-13</lastmod><changefreq>weekly</changefreq><priority>0.7</priority>
   </url>
-  <url><loc>https://soulbody-studio.com/article-why-robots-need-soft-skin</loc><lastmod>2026-07-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://soulbody-studio.com/article-robot-skin-thermal-design</loc><lastmod>2026-07-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://soulbody-studio.com/article-robot-skin-customization-guide</loc><lastmod>2026-07-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulbody-studio.com/article-why-robots-need-soft-skin</loc><lastmod>2026-07-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority><image:image><image:loc>https://soulbody-studio.com/images/robot-shoulder-yingyun.png</image:loc><image:title>机器人为什么需要软皮肤</image:title></image:image></url>
+  <url><loc>https://soulbody-studio.com/article-robot-skin-thermal-design</loc><lastmod>2026-07-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority><image:image><image:loc>https://soulbody-studio.com/images/robot-arm-yingyun-knitted.png</image:loc><image:title>机器人软皮肤散热设计</image:title></image:image></url>
+  <url><loc>https://soulbody-studio.com/article-robot-skin-customization-guide</loc><lastmod>2026-07-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority><image:image><image:loc>https://soulbody-studio.com/images/products/robot-embodied-softskin-new.png</image:loc><image:title>机器人软皮肤定制资料指南</image:title></image:image></url>
 </urlset>

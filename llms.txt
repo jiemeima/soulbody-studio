@@ -1,47 +1,43 @@
-# llms.txt for SOULBODY STUDIO / 灵躯工纺工作室
+# 灵躯工纺 / SOULBODY STUDIO
 
-Site: https://soulbody-studio.com/
-Name: 灵躯工纺工作室 / SOULBODY STUDIO
-Description: 灵躯工纺工作室专注机器人针织仿生软皮肤与机器人服饰定制，提供 Roboskin 机器人软皮肤、人形机器人外衣、医疗康复设备针织包覆、工业机器人特种服、导电纱线触觉电子皮肤等解决方案。
+> 灵躯工纺专注机器人针织仿生软皮肤与功能外观织物，面向人形机器人、服务机器人、医疗康复设备、科研样机和展演机器人提供结构评估、3D 针织制版、打样与小批量柔性生产。
 
-Core Positioning:
-灵躯工纺工作室是一家专注机器人针织仿生软皮肤与机器人服饰定制的技术型工作室，基于圣东尼无缝针织、3D 针织算版、功能纱线与导电纱线集成，为人形机器人、具身机器人、医疗康复设备、工业机器人提供可穿脱、可水洗、可快速打样的机器人软皮肤解决方案。
+Official site: https://soulbody-studio.com/
+Organization: 义乌市盈云科技有限公司
+Brand: 灵躯工纺 / SOULBODY STUDIO
+Language: zh-CN, en
 
-Key Pages:
-- 首页: https://soulbody-studio.com/
-- 产品中心: https://soulbody-studio.com/products.html
-- 关于我们: https://soulbody-studio.com/about.html
-- 联系我们: https://soulbody-studio.com/contact.html
-- FAQ: https://soulbody-studio.com/faq.html
+## Core pages
 
-Core Topics:
-- 机器人服饰
-- 机器人服装
-- 机器人软皮肤
-- 针织仿生软皮肤
-- Roboskin
-- 人形机器人外衣
-- 具身机器人软皮肤
-- 机器人针织外壳
-- 圣东尼无缝针织
-- 3D 针织算版
-- 导电纱线
-- 触觉电子皮肤
-- 可穿脱可水洗机器人外衣
-- Figure 03 风格机器人面料
-- 1X NEO 风格针织软皮肤
+- [首页](https://soulbody-studio.com/): 品牌定位、技术能力与服务流程
+- [Roboskin](https://soulbody-studio.com/products-roboskin): 针织仿生软皮肤系统
+- [人形机器人解决方案](https://soulbody-studio.com/solutions-humanoid): 人形机器人外层材料与项目路径
+- [产品案例](https://soulbody-studio.com/products): 产品和应用方向
+- [行业洞察](https://soulbody-studio.com/insights): 机器人软皮肤专业内容与媒体合作
+- [常见问题](https://soulbody-studio.com/faq): 定制、材料、维护与合作问答
+- [关于我们](https://soulbody-studio.com/about): 公司与技术能力
+- [联系咨询](https://soulbody-studio.com/contact): 项目评估与联系方式
 
-Services:
-- 机器人服饰设计与定制
-- 人形机器人软皮肤打样
-- Roboskin 针织仿生软皮肤方案
-- 医疗康复设备针织包覆
-- 工业机器人功能防护服
-- 导电纱线触觉电子皮肤开发
-- 机器人运动风格服饰定制
-- 小批量柔性生产
+## Technical articles
 
-Contact:
-- Phone: 13600595031
+- [机器人为什么需要软皮肤？](https://soulbody-studio.com/article-why-robots-need-soft-skin)
+- [针织机器人皮肤会影响散热吗？](https://soulbody-studio.com/article-robot-skin-thermal-design)
+- [定制机器人软皮肤需要准备哪些资料？](https://soulbody-studio.com/article-robot-skin-customization-guide)
+- [RSS feed](https://soulbody-studio.com/feed.xml)
+
+## Topics and capabilities
+
+- 机器人软皮肤、机器人针织皮肤、机器人外观织物
+- 3D 针织算版、无缝一体织造、弹性与网眼分区
+- 散热区域、关节活动、接口与维护口适配
+- 导电纱线与触觉电子皮肤织物基底
+- 可拆卸、可清洁、可局部更换的机器人外层
+- 原型打样与小批量柔性生产
+
+Important engineering boundary: 功能纱线或导电纱线本身不等于整机达到阻燃、抗菌、防水或触觉性能。具体性能需结合材料规格、结构、电路、算法与整机测试验证。
+
+## Contact
+
+- Phone: +86 136 0059 5031
 - Email: sunny.xu@yingyun-link.com
-- Address: 义乌市川塘路66号盈云科创大厦A栋
+- Location: Yiwu, Zhejiang, China

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>灵躯工纺｜机器人软皮肤行业洞察</title>
+    <link>https://soulbody-studio.com/insights</link>
+    <description>机器人针织软皮肤、人形机器人外观材料、热管理、维护与触觉织物基底的专业内容。</description>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 14 Jul 2026 08:30:00 +0800</lastBuildDate>
+    <atom:link href="https://soulbody-studio.com/feed.xml" rel="self" type="application/rss+xml" />
+    <item><title>机器人为什么需要软皮肤？它不只是给机器人穿衣服</title><link>https://soulbody-studio.com/article-why-robots-need-soft-skin</link><guid isPermaLink="true">https://soulbody-studio.com/article-why-robots-need-soft-skin</guid><pubDate>Mon, 13 Jul 2026 10:00:00 +0800</pubDate><description>从接触界面、快速迭代、维护和功能集成分析机器人软皮肤的价值与边界。</description></item>
+    <item><title>针织机器人皮肤会影响散热吗？</title><link>https://soulbody-studio.com/article-robot-skin-thermal-design</link><guid isPermaLink="true">https://soulbody-studio.com/article-robot-skin-thermal-design</guid><pubDate>Mon, 13 Jul 2026 10:00:00 +0800</pubDate><description>围绕热源、风道、网眼密度、开孔和测试验证介绍机器人软皮肤热管理原则。</description></item>
+    <item><title>定制机器人软皮肤需要准备哪些资料？</title><link>https://soulbody-studio.com/article-robot-skin-customization-guide</link><guid isPermaLink="true">https://soulbody-studio.com/article-robot-skin-customization-guide</guid><pubDate>Mon, 13 Jul 2026 10:00:00 +0800</pubDate><description>三视图、关键尺寸、三维模型、运动边界、接口、散热与测试目标的项目清单。</description></item>
+  </channel>
+</rss>
