@@ -417,39 +417,6 @@ html[lang="en"] .nav-menu a { font-size: 12px; }
   transform: translateY(-5px);
 }
 
-.feature-icon {
-  width: 48px;
-  height: 48px;
-  background: transparent;
-  border: 1.5px solid var(--gold);
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 20px;
-  position: relative;
-  transition: var(--transition);
-}
-
-.feature-item:hover .feature-icon {
-  background: var(--gold);
-  border-color: var(--gold);
-}
-
-.feature-icon::after {
-  content: '';
-  width: 16px;
-  height: 16px;
-  border-top: 1.5px solid var(--gold);
-  border-right: 1.5px solid var(--gold);
-  transform: rotate(45deg) translate(-2px, 2px);
-  transition: var(--transition);
-}
-
-.feature-item:hover .feature-icon::after {
-  border-color: var(--primary);
-}
-
 .feature-item h3 {
   font-size: 20px;
   margin-bottom: 10px;
@@ -671,9 +638,36 @@ html[lang="en"] .nav-menu a { font-size: 12px; }
   color: var(--text-light);
 }
 
+.products-case-grid .product-card.activewear-series {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(280px, 0.9fr) minmax(320px, 1.1fr);
+  border: 1px solid rgba(47, 196, 229, .22);
+}
+
+.products-case-grid .activewear-series .product-img {
+  min-height: 390px;
+}
+
+.products-case-grid .activewear-series .product-info {
+  padding: 40px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 @media (max-width: 700px) {
   .products-case-grid {
     grid-template-columns: 1fr;
+  }
+
+  .products-case-grid .product-card.activewear-series {
+    grid-template-columns: 1fr;
+  }
+
+  .products-case-grid .activewear-series .product-img {
+    min-height: 0;
+    aspect-ratio: 4 / 3;
   }
 }
 
@@ -2026,19 +2020,6 @@ html[lang="en"] .nav-menu a { font-size: 12px; }
   box-shadow: 0 10px 30px rgba(47, 196, 229, .28);
 }
 
-.feature-icon {
-  border-color: var(--accent);
-}
-
-.feature-icon::after {
-  border-color: var(--accent);
-}
-
-.feature-item:hover .feature-icon {
-  border-color: var(--accent);
-  background: var(--accent);
-}
-
 .product-tag {
   background: rgba(47, 196, 229, .10);
 }
@@ -2648,4 +2629,375 @@ html[lang="en"] .nav-menu a { font-size: 12px; }
   .wechat-contact-card { grid-template-columns: 110px 1fr; gap: 15px; }
   .wechat-contact-card img { width: 110px; height: 110px; }
   .phone-modal-actions .phone-call { display: inline-block; }
+}
+
+/* ========================================
+   全站深色视觉主题 · 黑曜底色 + 蓝紫辉光
+   ======================================== */
+:root {
+  --primary: #f4f6ff;
+  --secondary: #0a0d18;
+  --accent: #7768ff;
+  --accent-hover: #9a8cff;
+  --cyber-cyan: #38bdf8;
+  --gold: #8b7cff;
+  --gold-light: #b9b0ff;
+  --text: #eef1fb;
+  --text-light: #a4adc2;
+  --text-white: #ffffff;
+  --bg-white: #070a12;
+  --bg-light: #0b0f1b;
+  --bg-dark: #03050a;
+  --border: rgba(153, 165, 205, .18);
+  --shadow: 0 18px 50px rgba(0, 0, 0, .28);
+  --shadow-hover: 0 24px 70px rgba(40, 42, 110, .38);
+}
+
+html { background: #03050a; }
+
+body {
+  color: var(--text);
+  background:
+    radial-gradient(circle at 82% 7%, rgba(85, 63, 210, .18), transparent 26rem),
+    radial-gradient(circle at 8% 34%, rgba(22, 119, 204, .11), transparent 30rem),
+    #05070d;
+  background-attachment: fixed;
+}
+
+.navbar {
+  background: rgba(3, 5, 10, .82);
+  border-bottom-color: rgba(139, 124, 255, .18);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, .18);
+}
+
+.nav-menu a::after {
+  background: linear-gradient(90deg, #725fff, #38bdf8);
+  box-shadow: 0 0 12px rgba(119, 104, 255, .72);
+}
+
+.nav-menu a:hover,
+.nav-menu a.active,
+.footer-title { color: #a99eff; }
+
+.language-switch {
+  border-color: rgba(151, 138, 255, .38);
+  background: rgba(119, 104, 255, .06);
+}
+
+.language-switch span { color: #8ecfff; }
+
+.hero,
+.hero.hero-split {
+  background:
+    radial-gradient(circle at 72% 38%, rgba(95, 72, 225, .30), transparent 29rem),
+    radial-gradient(circle at 18% 76%, rgba(26, 138, 218, .14), transparent 30rem),
+    linear-gradient(135deg, #03050a 0%, #080b17 48%, #060811 100%);
+}
+
+.hero.hero-split::before {
+  opacity: .48;
+  background-image:
+    linear-gradient(rgba(127, 109, 255, .06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(127, 109, 255, .06) 1px, transparent 1px);
+}
+
+.hero.hero-split::after {
+  background: radial-gradient(circle, rgba(63, 182, 255, .14), transparent 68%);
+  filter: blur(16px);
+}
+
+.hero-eyebrow,
+.hero-tech-tags li span,
+.section-label,
+.category-kicker,
+.product-tag,
+.stat-number { color: #8f82ff; }
+
+.hero-eyebrow-dot {
+  background: #6fddff;
+  box-shadow: 0 0 18px rgba(75, 207, 255, .9);
+}
+
+.hero.hero-split h1 span,
+.insights-hero h1 em {
+  color: #9d91ff;
+  text-shadow: 0 0 28px rgba(119, 104, 255, .28);
+}
+
+.hero-visual-frame {
+  border-color: rgba(139, 124, 255, .34);
+  box-shadow: 0 40px 100px rgba(0, 0, 0, .48), 0 0 80px rgba(83, 63, 204, .18);
+}
+
+.hero-callout div,
+.hero-secondary-shot {
+  border-color: rgba(139, 124, 255, .28);
+  background: rgba(6, 9, 18, .82);
+}
+
+.btn-primary {
+  border-color: transparent;
+  background: linear-gradient(112deg, #705cff, #36b9f2);
+  color: #fff;
+  box-shadow: 0 12px 30px rgba(91, 76, 224, .26);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 16px 42px rgba(91, 76, 224, .42), 0 0 26px rgba(56, 189, 248, .18);
+}
+
+.btn-outline {
+  border-color: rgba(159, 145, 255, .48);
+  color: #e9e6ff;
+  background: rgba(119, 104, 255, .05);
+}
+
+.btn-outline:hover {
+  border-color: #8b7cff;
+  background: rgba(119, 104, 255, .14);
+  color: #fff;
+}
+
+.section,
+.categories,
+.article-page,
+.insights-section {
+  color: var(--text);
+  background-color: transparent !important;
+}
+
+.section-title,
+.category-info h3,
+.feature-item h3,
+.product-info h3,
+.about-text h2,
+.contact-info h2,
+.contact-detail h4,
+.lead-form-head h2,
+.lead-form label {
+  color: #f5f6ff;
+}
+
+.section-desc,
+.category-info p,
+.feature-item p,
+.product-info p,
+.about-text p,
+.contact-info > p,
+.contact-detail p { color: var(--text-light); }
+
+.category-card,
+.feature-item,
+.product-card,
+.products-case-grid .product-card:not(.banner-softskin),
+.products-case-grid .product-card:not(.banner-softskin) .product-info,
+.insight-card,
+.lead-form-card,
+.contact-form,
+.wechat-contact-card {
+  border: 1px solid rgba(139, 124, 255, .18);
+  background:
+    radial-gradient(circle at 100% 0, rgba(102, 80, 220, .12), transparent 45%),
+    rgba(13, 17, 30, .90);
+  box-shadow: 0 22px 60px rgba(0, 0, 0, .24);
+}
+
+.category-card:hover,
+.feature-item:hover,
+.product-card:hover,
+.insight-card:hover {
+  border-color: rgba(121, 104, 255, .52);
+  box-shadow: 0 26px 75px rgba(23, 20, 72, .44), 0 0 36px rgba(79, 69, 200, .13);
+}
+
+.category-arrow {
+  border-color: rgba(139, 124, 255, .46);
+  color: #9f94ff;
+}
+
+.product-tag {
+  background: rgba(119, 104, 255, .13);
+  border: 1px solid rgba(139, 124, 255, .14);
+}
+
+.product-card.banner-softskin {
+  border-color: rgba(119, 104, 255, .34);
+  background:
+    radial-gradient(circle at 88% 10%, rgba(58, 170, 240, .15), transparent 32%),
+    linear-gradient(135deg, rgba(95, 73, 222, .17), rgba(10, 13, 24, .96));
+}
+
+.products-case-grid .product-card.activewear-series {
+  border-color: rgba(56, 189, 248, .24);
+  background:
+    radial-gradient(circle at 0 100%, rgba(56, 189, 248, .13), transparent 40%),
+    rgba(13, 17, 30, .90);
+}
+
+.page-banner,
+.insights-hero {
+  background:
+    radial-gradient(circle at 76% 24%, rgba(101, 77, 226, .34), transparent 30rem),
+    radial-gradient(circle at 16% 90%, rgba(37, 138, 214, .16), transparent 28rem),
+    linear-gradient(135deg, #03050a, #090c1a 60%, #050710);
+}
+
+.page-banner h1,
+.page-banner p { color: #fff; }
+
+.tech-spec-panel {
+  border-color: rgba(127, 105, 255, .32);
+  background:
+    linear-gradient(rgba(122, 103, 255, .045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(122, 103, 255, .045) 1px, transparent 1px),
+    radial-gradient(circle at 88% 8%, rgba(92, 70, 221, .20), transparent 31%),
+    #070914;
+  background-size: 36px 36px, 36px 36px, auto, auto;
+}
+
+.tech-spec-icon {
+  border-color: rgba(139, 124, 255, .46);
+  background: rgba(119, 104, 255, .08);
+}
+
+.tech-spec-meter i {
+  background: linear-gradient(90deg, #725fff, #38bdf8);
+  box-shadow: 0 0 14px rgba(119, 104, 255, .55);
+}
+
+.process-timeline {
+  border-color: rgba(139, 124, 255, .20);
+  background:
+    radial-gradient(circle at 100% 0, rgba(95, 73, 222, .16), transparent 28%),
+    linear-gradient(180deg, rgba(14, 18, 33, .96), rgba(8, 11, 20, .96));
+  box-shadow: 0 24px 65px rgba(0, 0, 0, .28);
+}
+
+.process-head h3,
+.process-content h4 { color: #f4f6ff; }
+.process-node {
+  border-color: rgba(139, 124, 255, .45);
+  background: #0c1020;
+  box-shadow: 0 0 0 7px rgba(10, 14, 26, .96);
+  color: #a99eff;
+}
+.process-node i { border-color: #0c1020; background: #38bdf8; }
+.process-content p,
+.process-head > p,
+.process-cta { color: var(--text-light); }
+.process-cta { border-top-color: rgba(139, 124, 255, .16); }
+.process-cta a { color: #8ecfff; }
+
+.about-intro,
+.contact-grid,
+.stats-grid { color: var(--text); }
+
+.contact-icon {
+  background: linear-gradient(135deg, #705cff, #38bdf8);
+  color: #fff;
+}
+
+.contact-form input,
+.contact-form textarea,
+.lead-form input,
+.lead-form select,
+.lead-form textarea {
+  border-color: rgba(139, 124, 255, .24);
+  background: rgba(4, 7, 14, .76);
+  color: #f3f5ff;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder,
+.lead-form input::placeholder,
+.lead-form textarea::placeholder { color: #737d98; }
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.lead-form input:focus,
+.lead-form select:focus,
+.lead-form textarea:focus {
+  border-color: #7e6dff;
+  box-shadow: 0 0 0 3px rgba(119, 104, 255, .14), 0 0 24px rgba(56, 189, 248, .08);
+}
+
+.article-page { background: #05070d; }
+.article-header h1,
+.article-content h2,
+.article-content strong { color: #f3f5ff; }
+.article-header h1 em,
+.article-header > a { color: #9184ff; }
+.article-lead,
+.article-content { color: #aab3c7; }
+.article-summary,
+.article-note,
+.article-checklist span,
+.article-related > * {
+  border-color: rgba(139, 124, 255, .26);
+  background: rgba(16, 20, 35, .92);
+}
+.article-table { border-color: rgba(139, 124, 255, .22); }
+.article-table div { border-color: rgba(139, 124, 255, .22); }
+.article-related a b { color: #edf0ff; }
+.article-related a small { color: #8ecfff; }
+.article-action { background: linear-gradient(135deg, #161330, #0a1d31); }
+
+.insight-card-body h2,
+.insight-card-body h3,
+.insight-cta h2 { color: #f2f4ff; }
+.insight-card-body p,
+.insight-card-body li,
+.insight-cta p { color: var(--text-light); }
+.insight-card-body ul { border-top-color: rgba(139, 124, 255, .16); }
+.insight-card-body small,
+.insight-card-body a,
+.insight-cta > span { color: #9184ff; }
+.media-desk { background: linear-gradient(135deg, #070913, #11102a 64%, #071724); }
+.media-contact { color: #fff; background: linear-gradient(100deg, #705cff, #2aaeea); }
+
+.conversion-bar {
+  border-color: rgba(139, 124, 255, .30);
+  background: rgba(8, 10, 20, .92);
+  box-shadow: 0 22px 55px rgba(0, 0, 0, .40), 0 0 30px rgba(72, 57, 178, .10);
+}
+.conversion-bar .conversion-primary {
+  border-color: transparent;
+  background: linear-gradient(110deg, #705cff, #38bdf8);
+  color: #fff;
+}
+
+.wechat-modal-backdrop,
+.phone-modal-backdrop { background: rgba(2, 3, 8, .82); }
+.wechat-modal-panel,
+.phone-modal-panel {
+  border: 1px solid rgba(139, 124, 255, .28);
+  background: #0d1120;
+  color: var(--text);
+}
+.wechat-modal-panel h2,
+.wechat-modal-panel p,
+.phone-modal-panel h2,
+.phone-modal-panel strong { color: #f5f6ff; }
+.phone-modal-actions button,
+.phone-modal-actions a { color: #a99eff; }
+
+.footer {
+  border-top: 1px solid rgba(139, 124, 255, .16);
+  background:
+    radial-gradient(circle at 18% 0, rgba(92, 70, 221, .15), transparent 24rem),
+    #03050a;
+}
+
+::selection {
+  background: rgba(119, 104, 255, .42);
+  color: #fff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+  }
 }
