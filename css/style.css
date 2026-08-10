@@ -714,6 +714,62 @@ html[lang="en"] .nav-menu a { font-size: 12px; }
   margin-bottom: 0;
 }
 
+.dexterous-hand-placeholder {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  color: #eef2ff;
+  background:
+    linear-gradient(rgba(135, 116, 255, .06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(135, 116, 255, .06) 1px, transparent 1px),
+    radial-gradient(circle at 50% 46%, rgba(105, 81, 224, .34), transparent 34%),
+    linear-gradient(145deg, #090c19, #11162b 58%, #080b15);
+  background-size: 38px 38px, 38px 38px, auto, auto;
+}
+
+.placeholder-rings,
+.placeholder-rings span {
+  position: absolute;
+  border: 1px solid rgba(148, 132, 255, .34);
+  border-radius: 50%;
+}
+
+.placeholder-rings {
+  width: min(68%, 340px);
+  aspect-ratio: 1;
+  box-shadow: 0 0 70px rgba(94, 74, 226, .18);
+}
+
+.placeholder-rings span:nth-child(1) { inset: 14%; }
+.placeholder-rings span:nth-child(2) { inset: 29%; border-color: rgba(83, 195, 255, .30); }
+.placeholder-rings span:nth-child(3) { inset: 43%; background: rgba(119, 104, 255, .18); }
+
+.placeholder-copy {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  justify-items: center;
+  gap: 9px;
+  text-align: center;
+}
+
+.placeholder-copy span,
+.placeholder-copy small {
+  color: rgba(207, 213, 255, .58);
+  font: 600 9px/1.3 Consolas, monospace;
+  letter-spacing: .20em;
+}
+
+.placeholder-copy strong {
+  font-size: clamp(20px, 2vw, 28px);
+  letter-spacing: .08em;
+  text-shadow: 0 0 30px rgba(126, 107, 255, .45);
+}
+
 @media (max-width: 760px) {
   .products-case-grid { grid-template-columns: 1fr; }
 
