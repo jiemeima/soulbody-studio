@@ -17,6 +17,81 @@ document.addEventListener('DOMContentLoaded', function() {
   };
   const pathPage = window.location.pathname.split('/').pop() || 'index.html';
   const currentPage = pathPage.includes('.') ? pathPage : pathPage + '.html';
+
+  // 首页入站动画：每个浏览会话展示一次，也可通过 ?intro=1 强制预览
+  const isHomePage = currentPage === 'index.html' || currentPage === 'index-en.html';
+  const forceIntro = new URLSearchParams(window.location.search).get('intro') === '1';
+  let introSeen = false;
+  try { introSeen = sessionStorage.getItem('soulbody_intro_seen') === '1'; } catch (err) {}
+
+  if (isHomePage && (!introSeen || forceIntro)) {
+    const intro = document.createElement('div');
+    intro.className = 'site-intro';
+    intro.setAttribute('role', 'dialog');
+    intro.setAttribute('aria-modal', 'true');
+    intro.setAttribute('aria-labelledby', 'site-intro-title');
+    intro.innerHTML = `
+      <div class="site-intro-grid" aria-hidden="true"></div>
+      <div class="site-intro-glow site-intro-glow-a" aria-hidden="true"></div>
+      <div class="site-intro-glow site-intro-glow-b" aria-hidden="true"></div>
+      <div class="site-intro-content">
+        <p class="site-intro-eyebrow">SOULBODY STUDIO / ROBOSKIN</p>
+        <div class="site-intro-core" aria-hidden="true">
+          <span class="site-intro-orbit site-intro-orbit-a"></span>
+          <span class="site-intro-orbit site-intro-orbit-b"></span>
+          <span class="site-intro-core-light"></span>
+          <img src="images/盈云白.png" alt="">
+        </div>
+        <div class="site-intro-copy">
+          <span>${isEnglish ? 'KNITTED BIONIC SOFT SKIN' : '针织仿生软皮肤'}</span>
+          <h1 id="site-intro-title">${isEnglish ? 'Weaving a second skin<br>for robots' : '为机器人织造<br>第二层皮肤'}</h1>
+        </div>
+        <button type="button" class="site-intro-enter" aria-label="${isEnglish ? 'Enter SOULBODY STUDIO website' : '进入灵躯工纺官方网站'}">
+          <span class="site-intro-enter-icon" aria-hidden="true">→</span>
+          <span>${isEnglish ? 'ENTER SITE' : '进入官网'}</span>
+        </button>
+      </div>
+      <div class="site-intro-foot" aria-hidden="true">
+        <span>YINGYUN / SOFT-SKIN SYSTEM</span>
+        <span>CLICK TO ENTER</span>
+      </div>`;
+    document.body.prepend(intro);
+    document.body.classList.add('intro-open');
+
+    const enterButton = intro.querySelector('.site-intro-enter');
+    const closeIntro = function() {
+      if (intro.classList.contains('is-leaving')) return;
+      intro.classList.add('is-leaving');
+      document.body.classList.remove('intro-open');
+      document.removeEventListener('keydown', trapIntroFocus);
+      try { sessionStorage.setItem('soulbody_intro_seen', '1'); } catch (err) {}
+      window.setTimeout(() => {
+        intro.remove();
+        const heroTitle = document.querySelector('.hero h1');
+        if (heroTitle) {
+          heroTitle.setAttribute('tabindex', '-1');
+          heroTitle.focus({ preventScroll: true });
+        }
+      }, 900);
+    };
+
+    const trapIntroFocus = function(event) {
+      if (event.key === 'Tab') {
+        event.preventDefault();
+        enterButton.focus({ preventScroll: true });
+      } else if (event.key === 'Escape') {
+        closeIntro();
+      }
+    };
+
+    enterButton.addEventListener('click', closeIntro);
+    document.addEventListener('keydown', trapIntroFocus);
+    requestAnimationFrame(() => {
+      intro.classList.add('is-ready');
+      enterButton.focus({ preventScroll: true });
+    });
+  }
+
   const navContainer = document.querySelector('.nav-container');
   if (navContainer && languagePages[currentPage]) {
     const languageSwitch = document.createElement('a');
