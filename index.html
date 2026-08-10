@@ -89,6 +89,32 @@
   <meta name="twitter:title" content="灵躯工纺｜机器人针织仿生软皮肤与机器人服饰定制">
   <meta name="twitter:description" content="灵躯工纺工作室专注针织仿生软皮肤 · 机器人服饰定制服务。凭借针织天然高弹、3D针织算版、传感一体化织造等核心优势，为具身机器人、医疗康复设备、灵巧机械手提供严丝合缝、可穿脱、可水洗的机器人软皮肤解决方案。">
   <meta name="twitter:image" content="https://soulbody-studio.com/images/robot-shoulder-yingyun.png">
+  <link rel="preload" as="image" href="images/盈云白.png">
+  <style>
+    html.intro-pending,
+    html.intro-pending body { background: #03050a; }
+    html.intro-pending body > :not(.site-intro) {
+      opacity: 0 !important;
+      visibility: hidden !important;
+    }
+    html.intro-pending .site-intro {
+      opacity: 1;
+      visibility: visible;
+    }
+  </style>
+  <script>
+    (function () {
+      var forceIntro = new URLSearchParams(window.location.search).get('intro') === '1';
+      var introSeen = false;
+      try { introSeen = sessionStorage.getItem('soulbody_intro_seen') === '1'; } catch (err) {}
+      if (!introSeen || forceIntro) {
+        document.documentElement.classList.add('intro-pending');
+        window.__soulbodyIntroGuard = window.setTimeout(function () {
+          document.documentElement.classList.remove('intro-pending');
+        }, 6000);
+      }
+    })();
+  </script>
   <link rel="stylesheet" href="css/style.css?v=20260810a">
 </head>
 <body>
@@ -483,6 +509,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=20260810a"></script>
+  <script src="js/main.js?v=20260810b"></script>
 </body>
 </html>

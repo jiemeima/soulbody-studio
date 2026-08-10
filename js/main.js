@@ -61,6 +61,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const enterButton = intro.querySelector('.site-intro-enter');
     const closeIntro = function() {
       if (intro.classList.contains('is-leaving')) return;
+      document.documentElement.classList.remove('intro-pending');
+      if (window.__soulbodyIntroGuard) {
+        window.clearTimeout(window.__soulbodyIntroGuard);
+        window.__soulbodyIntroGuard = null;
+      }
       intro.classList.add('is-leaving');
       document.body.classList.remove('intro-open');
       document.removeEventListener('keydown', trapIntroFocus);
