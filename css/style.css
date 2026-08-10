@@ -2615,7 +2615,11 @@ html[lang="en"] .nav-menu a { font-size: 12px; }
   flex-direction: column;
   align-items: center;
   gap: 18px;
+  width: min(calc(100% - 40px), 900px);
   max-width: 900px;
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
   text-align: center;
 }
 .insight-cta > div { max-width: 720px; }
