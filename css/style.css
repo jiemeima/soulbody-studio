@@ -2511,6 +2511,15 @@ html[lang="en"] .nav-menu a { font-size: 12px; }
   .process-cta { align-items: flex-start; flex-direction: column; }
 }
 
+/* Compact FAQ accordion */
+.faq-list { max-width: 900px; margin: 0 auto; border-top: 1px solid rgba(126, 104, 255, .22); }
+.faq-item { border-bottom: 1px solid rgba(126, 104, 255, .22); }
+.faq-item summary { position: relative; padding: 24px 52px 24px 4px; color: var(--text-dark); font-size: 18px; font-weight: 650; cursor: pointer; list-style: none; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after { content: "+"; position: absolute; right: 8px; color: var(--primary); font-size: 26px; font-weight: 300; transition: transform .25s ease; }
+.faq-item[open] summary::after { transform: rotate(45deg); }
+.faq-item p { max-width: 720px; margin: -4px 48px 24px 4px; color: var(--text-light); line-height: 1.8; }
+
 /* ========================================
    全站询盘承接与需求评估表单
    ======================================== */
