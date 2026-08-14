@@ -1407,6 +1407,16 @@ html[lang="en"] .nav-menu a { font-size: 12px; }
 .article-related a small { margin-top: 16px; color: #4e878c; }
 @media(max-width:700px){.article-table,.article-related,.article-checklist{grid-template-columns:1fr}.article-header{padding-top:65px}.article-content{font-size:15px}.article-cover{margin-bottom:50px}}
 
+/* GEO content: factual comparison tables and evidence links */
+.geo-table-wrap { max-width: 1080px; margin: 0 auto; overflow-x: auto; border: 1px solid rgba(139,124,255,.2); border-radius: 16px; background: rgba(12,14,25,.7); }
+.geo-table { width: 100%; min-width: 720px; border-collapse: collapse; color: var(--text-light); }
+.geo-table th,.geo-table td { padding: 18px 20px; border-bottom: 1px solid rgba(139,124,255,.16); text-align: left; line-height: 1.7; }
+.geo-table th { color: #f2f4ff; background: rgba(139,124,255,.1); font-size: 13px; letter-spacing: .05em; }
+.geo-table td:first-child { color: #f2f4ff; font-weight: 650; }
+.geo-table tr:last-child td { border-bottom: 0; }
+.geo-more { margin: 34px auto 0; text-align: center; }
+.geo-more a { color: #9184ff; font-weight: 700; }
+
 @media (prefers-reduced-motion: reduce) {
   .hero.hero-split::after,
   .hero-badge::before { animation: none; }

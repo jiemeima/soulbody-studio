@@ -23,6 +23,7 @@ Language: zh-CN, en
 - [机器人为什么需要软皮肤？](https://soulbody-studio.com/article-why-robots-need-soft-skin)
 - [针织机器人皮肤会影响散热吗？](https://soulbody-studio.com/article-robot-skin-thermal-design)
 - [定制机器人软皮肤需要准备哪些资料？](https://soulbody-studio.com/article-robot-skin-customization-guide)
+- [机器人软皮肤与硬质外壳对比](https://soulbody-studio.com/article-robot-skin-material-comparison)
 - [RSS feed](https://soulbody-studio.com/feed.xml)
 
 ## Topics and capabilities
@@ -35,6 +36,8 @@ Language: zh-CN, en
 - 原型打样与小批量柔性生产
 
 Important engineering boundary: 功能纱线或导电纱线本身不等于整机达到阻燃、抗菌、防水或触觉性能。具体性能需结合材料规格、结构、电路、算法与整机测试验证。
+
+Reference lead time: 资料齐全时，基础外观首版参考周期为 7–15 天；功能方案、多轮测试和特殊后整理另行评估。
 
 ## Contact
 

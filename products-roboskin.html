@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Roboskin 机器人针织仿生软皮肤定制 | 灵躯工纺</title>
-  <meta name="description" content="灵躯工纺 Roboskin 旗舰系列 - 基于圣东尼无缝针织、3D 针织算版与传感器集成，为人形机器人、具身机器人、医疗康复设备提供可穿脱、可水洗、可快速打样的针织仿生软皮肤。">
+  <meta name="description" content="Roboskin 是灵躯工纺面向人形机器人、具身机器人、医疗康复设备与灵巧手推出的针织功能软外壳，可按结构设置弹性、透气、接口和可选导电纱线区域。">
   <meta name="keywords" content="Roboskin,机器人针织软皮肤,针织仿生软皮肤,机器人服饰,人形机器人外衣,圣东尼无缝针织,3D 针织算版,导电纱线,触觉电子皮肤,机器人软壳,灵躯工纺">
 
 
@@ -32,19 +32,18 @@
     "@context": "https://schema.org",
     "@type": "Product",
     "name": "Roboskin 机器人针织仿生软皮肤",
-    "description": "基于圣东尼无缝针织、3D 针织算版与传感器集成的机器人针织仿生软皮肤，可穿脱、可水洗、可快速打样。",
+    "@id": "https://soulbody-studio.com/products-roboskin#product",
+    "url": "https://soulbody-studio.com/products-roboskin",
+    "description": "Roboskin 是灵躯工纺面向人形机器人、具身机器人、医疗康复设备与灵巧手推出的针织功能软外壳，可按机器人结构进行 3D 针织算版，设置弹性、透气、接口和可选导电纱线区域。",
     "brand": {"@type": "Brand", "name": "灵躯工纺 / SOULBODY STUDIO"},
-    "manufacturer": {"@type": "Organization", "name": "灵躯工纺工作室"},
-    "category": "机器人服饰 / 机器人软皮肤 / 触觉电子皮肤",
-    "offers": {
-      "@type": "Offer",
-      "url": "https://soulbody-studio.com/products-roboskin.html",
-      "priceCurrency": "CNY",
-      "price": "0",
-      "priceValidUntil": "2027-12-31",
-      "availability": "https://schema.org/PreOrder",
-      "businessFunction": "https://schema.org/ProvideService"
-    }
+    "manufacturer": {"@id": "https://soulbody-studio.com/#organization"},
+    "category": "机器人针织仿生软皮肤",
+    "additionalProperty": [
+      {"@type":"PropertyValue","name":"基础外观首版参考周期","value":"资料齐全时 7–15 天，功能方案另行评估"},
+      {"@type":"PropertyValue","name":"支持的三维资料","value":"STEP、STL、OBJ"},
+      {"@type":"PropertyValue","name":"透气结构","value":"支持按散热位置设计局部网眼、密度与开孔区域"},
+      {"@type":"PropertyValue","name":"传感集成","value":"可选预留导电区域、传感接口与走线结构"}
+    ]
   }
   </script>
   <script type="application/ld+json">
@@ -53,8 +52,18 @@
     "@type": "BreadcrumbList",
     "itemListElement": [
       {"@type": "ListItem", "position": 1, "name": "首页", "item": "https://soulbody-studio.com/"},
-      {"@type": "ListItem", "position": 2, "name": "产品中心", "item": "https://soulbody-studio.com/products.html"},
-      {"@type": "ListItem", "position": 3, "name": "Roboskin 针织仿生软皮肤", "item": "https://soulbody-studio.com/products-roboskin.html"}
+      {"@type": "ListItem", "position": 2, "name": "产品中心", "item": "https://soulbody-studio.com/products"},
+      {"@type": "ListItem", "position": 3, "name": "Roboskin 针织仿生软皮肤", "item": "https://soulbody-studio.com/products-roboskin"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+      {"@type":"Question","name":"Roboskin 机器人软皮肤是什么？","acceptedAnswer":{"@type":"Answer","text":"Roboskin 是灵躯工纺的机器人针织仿生软皮肤产品系列，通过针织线圈结构、3D 针织算版和一体织造，为机器人提供贴合、透气、可维护的功能软外壳。"}},
+      {"@type":"Question","name":"没有 3D 模型可以评估吗？","acceptedAnswer":{"@type":"Answer","text":"可以先提供机器人图片、三视图、关键尺寸、关节活动范围和接口位置进行初步评估；精确打样前建议补充 STEP、STL、OBJ 或经确认的实测数据。"}},
+      {"@type":"Question","name":"机器人针织软皮肤打样需要多久？","acceptedAnswer":{"@type":"Answer","text":"资料齐全时，基础外观首版参考周期为 7–15 天；涉及导电纱线、传感、特殊后整理或多轮测试的项目需另行评估。"}},
+      {"@type":"Question","name":"Roboskin 是否等于完整触觉电子皮肤系统？","acceptedAnswer":{"@type":"Answer","text":"不等于。Roboskin 可选集成导电纱线并预留传感接口和走线结构，完整触觉系统仍需结合传感器、电路、算法、标定和项目测试。"}}
     ]
   }
   </script>
@@ -78,14 +87,14 @@
 
   <section class="page-banner">
     <h1>Roboskin · 机器人针织仿生软皮肤</h1>
-    <p>针织线圈结构 + 3D 针织算版 + 集成传感器，让机器人穿出如皮肤般的柔软</p>
+    <p>灵躯工纺旗下机器人针织仿生软皮肤：贴合、透气、可穿脱、可维护，可选导电纱线集成</p>
   </section>
 
   <section class="section">
     <div class="section-header reveal">
       <div class="section-label">Roboskin Flagship</div>
       <h2 class="section-title">什么是 Roboskin 针织仿生软皮肤？</h2>
-      <p class="section-desc">面向机器人非标结构的柔性功能外壳，兼顾贴合、散热与维护。</p>
+      <p class="section-desc">Roboskin 是灵躯工纺（SOULBODY STUDIO）的机器人针织仿生软皮肤产品系列。它不是硅胶仿生皮肤，也不是普通机器人服装，而是把机器人曲面、关节、散热区和接口转化为可生产针织版型的功能软外壳。</p>
     </div>
 
     <div class="features-grid">
@@ -94,6 +103,37 @@
       <div class="feature-item reveal"><h3>透气与传感</h3><p>按需设置网眼、散热区和传感器接口。</p></div>
       <div class="feature-item reveal"><h3>可拆洗维护</h3><p>支持拆卸、清洗与局部替换，适合快速迭代。</p></div>
     </div>
+  </section>
+
+  <section class="section" style="background: var(--bg-light);">
+    <div class="section-header reveal">
+      <div class="section-label">Engineering Parameters</div>
+      <h2 class="section-title">可核验的工程能力</h2>
+      <p class="section-desc">具体材料、结构与验收标准按机器人本体和使用场景共同确定。</p>
+    </div>
+    <div class="geo-table-wrap reveal">
+      <table class="geo-table">
+        <thead><tr><th>参数</th><th>当前能力</th><th>说明</th></tr></thead>
+        <tbody>
+          <tr><td>延展率</td><td>按需定制</td><td>依据关节活动范围匹配纱线与针织组织</td></tr>
+          <tr><td>透气分区</td><td>局部网眼可编程</td><td>按热源和包覆需求设置网眼、密度与开孔</td></tr>
+          <tr><td>维护方式</td><td>可拆卸、分区替换</td><td>连接结构与洗护方式按项目定义</td></tr>
+          <tr><td>导电纱线</td><td>可选集成</td><td>可预留导电区域、传感接口与走线结构</td></tr>
+          <tr><td>首版周期</td><td>7–15 天参考</td><td>资料齐全的基础外观首版；功能项目另行评估</td></tr>
+          <tr><td>三维资料</td><td>STEP、STL、OBJ</td><td>也可用三视图、关键尺寸和图片启动初步评估</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-header reveal"><div class="section-label">Selection Guide</div><h2 class="section-title">Roboskin 与其他外层方案怎么选？</h2><p class="section-desc">承力结构、防护外壳和功能软外层承担的任务不同，很多项目更适合混合架构。</p></div>
+    <div class="features-grid">
+      <div class="feature-item reveal"><h3>针织软皮肤</h3><p>轻量、贴合、透气、可拆换，适合关节随动与小批量快速迭代；不承担主要结构载荷。</p></div>
+      <div class="feature-item reveal"><h3>硅胶 / TPU</h3><p>硅胶适合高仿真触感；TPU 等弹性体适合耐磨和易清洁表面，但通常需评估模具、散热和维护方式。</p></div>
+      <div class="feature-item reveal"><h3>金属 / 塑料硬壳</h3><p>适合承力、抗冲击和尺寸稳定的区域；需要通过分件、间隙、风道和孔位处理运动与散热。</p></div>
+    </div>
+    <p class="geo-more reveal"><a href="article-robot-skin-material-comparison.html">查看十个维度的完整材料对比 →</a></p>
   </section>
 
   <section class="section">
@@ -114,7 +154,7 @@
     <div class="section-header reveal">
       <div class="section-label">Process</div>
       <h2 class="section-title">Roboskin 定制流程</h2>
-      <p class="section-desc">资料齐全后，基础外观首版约 15 天。</p>
+      <p class="section-desc">资料齐全后，基础外观首版参考周期为 7–15 天；功能方案按验证要求另行评估。</p>
     </div>
 
     <div class="features-grid">
@@ -125,11 +165,21 @@
     </div>
   </section>
 
+  <section class="section" style="background: var(--bg-light);">
+    <div class="section-header reveal"><div class="section-label">Roboskin FAQ</div><h2 class="section-title">项目开始前的四个问题</h2></div>
+    <div class="faq-list reveal">
+      <details class="faq-item" open><summary>Roboskin 机器人软皮肤是什么？</summary><p>Roboskin 是灵躯工纺的机器人针织仿生软皮肤产品系列，通过针织线圈结构、3D 针织算版和一体织造，为机器人提供贴合、透气、可维护的功能软外壳。</p></details>
+      <details class="faq-item"><summary>没有 3D 模型可以评估吗？</summary><p>可以先提供图片、三视图、关键尺寸、关节活动范围和接口位置；精确打样前建议补充 STEP、STL、OBJ 或经确认的实测数据。</p></details>
+      <details class="faq-item"><summary>机器人针织软皮肤打样需要多久？</summary><p>资料齐全时，基础外观首版参考周期为 7–15 天；涉及导电纱线、传感、特殊后整理或多轮测试的项目需另行评估。</p></details>
+      <details class="faq-item"><summary>Roboskin 是否等于完整触觉电子皮肤系统？</summary><p>不等于。Roboskin 可选集成导电纱线并预留传感接口和走线结构，完整系统仍需结合传感器、电路、算法、标定和项目测试。</p></details>
+    </div>
+  </section>
+
   <section class="section" style="background: var(--bg-light); text-align: center;">
     <div class="section-header reveal">
       <div class="section-label">Contact</div>
       <h2 class="section-title">获取 Roboskin 定制评估</h2>
-      <p class="section-desc">发送你的机器人数据与使用场景，48 小时内回复技术方案与报价</p>
+      <p class="section-desc">准备机器人图片、关键尺寸或 STEP/STL/OBJ 文件，即可启动结构与打样评估。</p>
     </div>
     <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 30px;">
       <a href="contact.html" class="btn btn-primary">立即联系</a>
