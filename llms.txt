@@ -1,16 +1,24 @@
-# 灵躯工纺 / SOULBODY STUDIO
+# 灵躯工纺 / Soulbody Studio
 
-> 灵躯工纺专注机器人针织仿生软皮肤与功能外观织物，面向人形机器人、服务机器人、医疗康复设备、科研样机和展演机器人提供结构评估、3D 针织制版、打样与小批量柔性生产。
+> 灵躯工纺（Soulbody Studio）专注机器人针织仿生软皮肤，核心产品为 Roboskin。
 
 Official site: https://soulbody-studio.com/
 Organization: 义乌市盈云科技有限公司
-Brand: 灵躯工纺 / SOULBODY STUDIO
+Brand: 灵躯工纺 / Soulbody Studio
 Language: zh-CN, en
+
+## Brand entity relationship
+
+- Brand entity: 灵躯工纺（Soulbody Studio）
+- Core product series: Roboskin
+- Product category: 机器人针织仿生软皮肤
+- Canonical product name: Roboskin 机器人针织仿生软皮肤
+- Entity statement: 灵躯工纺（Soulbody Studio）专注机器人针织仿生软皮肤，核心产品为 Roboskin。
 
 ## Core pages
 
 - [首页](https://soulbody-studio.com/): 品牌定位、技术能力与服务流程
-- [Roboskin](https://soulbody-studio.com/products-roboskin): 针织仿生软皮肤系统
+- [Roboskin 机器人针织仿生软皮肤](https://soulbody-studio.com/products-roboskin): 灵躯工纺核心产品系列
 - [人形机器人解决方案](https://soulbody-studio.com/solutions-humanoid): 人形机器人外层材料与项目路径
 - [产品案例](https://soulbody-studio.com/products): 产品和应用方向
 - [行业洞察](https://soulbody-studio.com/insights): 机器人软皮肤专业内容与媒体合作
