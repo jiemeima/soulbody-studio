@@ -159,8 +159,8 @@ document.addEventListener('DOMContentLoaded', function() {
   phoneModal.className = 'phone-modal';
   phoneModal.setAttribute('aria-hidden', 'true');
   phoneModal.innerHTML = isEnglish
-    ? '<div class="phone-modal-backdrop" data-phone-close></div><div class="phone-modal-panel" role="dialog" aria-modal="true" aria-labelledby="phone-modal-title"><button type="button" class="phone-modal-close" data-phone-close aria-label="Close phone enquiry">×</button><span>PHONE CONTACT</span><h2 id="phone-modal-title">Call Us</h2><strong>+86 136 0059 5031</strong><p>Monday-Friday, 8:00-17:30 (China Standard Time)</p><div class="phone-modal-actions"><button type="button" class="phone-copy">Copy Number</button><a href="tel:+8613600595031" class="phone-call">Call Now</a></div><small>International calls are welcome. Email is recommended outside working hours.</small></div>'
-    : '<div class="phone-modal-backdrop" data-phone-close></div><div class="phone-modal-panel" role="dialog" aria-modal="true" aria-labelledby="phone-modal-title"><button type="button" class="phone-modal-close" data-phone-close aria-label="关闭电话咨询">×</button><span>PHONE CONTACT</span><h2 id="phone-modal-title">电话咨询</h2><strong>136 0059 5031</strong><p>工作时间：周一至周五 8:00–17:30</p><div class="phone-modal-actions"><button type="button" class="phone-copy">复制号码</button><a href="tel:13600595031" class="phone-call">一键拨号</a></div><small>电脑端请复制号码；手机端可点击一键拨号。</small></div>';
+    ? '<div class="phone-modal-backdrop" data-phone-close></div><div class="phone-modal-panel" role="dialog" aria-modal="true" aria-labelledby="phone-modal-title"><button type="button" class="phone-modal-close" data-phone-close aria-label="Close phone enquiry">×</button><span>PHONE CONTACT</span><h2 id="phone-modal-title">Call Us</h2><strong>+86 180 0689 0218</strong><p>Monday-Friday, 8:00-17:30 (China Standard Time)</p><div class="phone-modal-actions"><button type="button" class="phone-copy">Copy Number</button><a href="tel:+8618006890218" class="phone-call">Call Now</a></div><small>International calls are welcome. Email is recommended outside working hours.</small></div>'
+    : '<div class="phone-modal-backdrop" data-phone-close></div><div class="phone-modal-panel" role="dialog" aria-modal="true" aria-labelledby="phone-modal-title"><button type="button" class="phone-modal-close" data-phone-close aria-label="关闭电话咨询">×</button><span>PHONE CONTACT</span><h2 id="phone-modal-title">电话咨询</h2><strong>180 0689 0218</strong><p>工作时间：周一至周五 8:00–17:30</p><div class="phone-modal-actions"><button type="button" class="phone-copy">复制号码</button><a href="tel:18006890218" class="phone-call">一键拨号</a></div><small>电脑端请复制号码；手机端可点击一键拨号。</small></div>';
   document.body.appendChild(phoneModal);
   const phoneTriggers = document.querySelectorAll('[data-phone-trigger]');
   const phoneClose = phoneModal.querySelector('.phone-modal-close');
@@ -179,11 +179,11 @@ document.addEventListener('DOMContentLoaded', function() {
   phoneModal.querySelectorAll('[data-phone-close]').forEach(el => el.addEventListener('click', closePhone));
   phoneModal.querySelector('.phone-copy').addEventListener('click', async function() {
     try {
-      if (navigator.clipboard && window.isSecureContext) await navigator.clipboard.writeText('13600595031');
+      if (navigator.clipboard && window.isSecureContext) await navigator.clipboard.writeText('18006890218');
       else throw new Error('clipboard unavailable');
       this.textContent = isEnglish ? 'Number Copied' : '号码已复制';
     } catch (err) {
-      this.textContent = isEnglish ? 'Please copy manually: +86 13600595031' : '请手动复制：13600595031';
+      this.textContent = isEnglish ? 'Please copy manually: +86 18006890218' : '请手动复制：18006890218';
     }
   });
   document.addEventListener('keydown', e => {
