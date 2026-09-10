@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const analyticsEndpoint = window.SOULBODY_ANALYTICS_ENDPOINT ||
     (/^(localhost|127\.0\.0\.1)$/.test(window.location.hostname)
       ? 'http://localhost:6239/public/website-analytics/events'
-      : '');
+      : 'https://events.soulbody-studio.com/public/website-analytics/events');
   const analyticsDisabled = navigator.doNotTrack === '1' || navigator.globalPrivacyControl === true;
   const analyticsId = function(storage, key) {
     try {
