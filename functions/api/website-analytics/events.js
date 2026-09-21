@@ -1,5 +1,6 @@
 // Forward only anonymous website statistics; never forward cookies or login tokens.
-const upstream = 'http://120.55.193.185:15666/api/public/website-analytics/events';
+// Cloudflare fetch requires a hostname. Keep this A record DNS-only -> 120.55.193.185.
+const upstream = 'http://analytics-origin.soulbody-studio.com:15666/api/public/website-analytics/events';
 const allowedOrigins = new Set(['https://soulbody-studio.com', 'https://www.soulbody-studio.com']);
 
 function reply(status, message) {
