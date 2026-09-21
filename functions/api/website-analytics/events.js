@@ -48,6 +48,10 @@ export async function onRequest({ request }) {
       redirect: 'error',
       signal: AbortSignal.timeout(10000),
     });
+    if (!response.ok) {
+      console.error('Analytics upstream failed', response.status);
+      return reply(502, 'Statistics upstream HTTP ' + response.status);
+    }
     return new Response(response.body, {
       status: response.status,
       headers: {
