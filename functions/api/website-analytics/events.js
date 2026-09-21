@@ -45,7 +45,7 @@ export async function onRequest({ request }) {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', Origin: origin },
       body,
-      redirect: 'error',
+      redirect: 'manual',
       signal: AbortSignal.timeout(10000),
     });
     if (!response.ok) {
@@ -61,6 +61,6 @@ export async function onRequest({ request }) {
     });
   } catch (error) {
     console.error('Analytics connection failed', error.message);
-    return reply(503, 'Statistics connection failed: ' + error.message);
+    return reply(503, 'Statistics service unavailable');
   }
 }
