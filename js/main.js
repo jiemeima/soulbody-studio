@@ -5,6 +5,73 @@
 
 document.addEventListener('DOMContentLoaded', function() {
   const isEnglish = document.documentElement.lang.toLowerCase().startsWith('en');
+
+  // 官网匿名访问与点击监听。生产环境可在 main.js 之前设置
+  // window.SOULBODY_ANALYTICS_ENDPOINT = 'https://你的客户系统域名/public/website-analytics/events';
+  const analyticsEndpoint = window.SOULBODY_ANALYTICS_ENDPOINT ||
+    (/^(localhost|127\.0\.0\.1)$/.test(window.location.hostname)
+      ? 'http://localhost:6239/public/website-analytics/events'
+      : 'https://events.soulbody-studio.com/public/website-analytics/events');
+  const analyticsDisabled = navigator.doNotTrack === '1' || navigator.globalPrivacyControl === true;
+  const analyticsId = function(storage, key) {
+    try {
+      let value = storage.getItem(key);
+      if (!value) {
+        value = window.crypto && crypto.randomUUID
+          ? crypto.randomUUID()
+          : Date.now().toString(36) + Math.random().toString(36).slice(2);
+        storage.setItem(key, value);
+      }
+      return value;
+    } catch (err) {
+      return Date.now().toString(36) + Math.random().toString(36).slice(2);
+    }
+  };
+  const visitorId = analyticsId(localStorage, 'soulbody_analytics_visitor');
+  const sessionId = analyticsId(sessionStorage, 'soulbody_analytics_session');
+  const safeUrl = function(value) {
+    if (!value) return '';
+    try {
+      const url = new URL(value, window.location.href);
+      return url.origin + url.pathname;
+    } catch (err) {
+      return String(value).slice(0, 1000);
+    }
+  };
+  const sendAnalytics = function(eventType, target) {
+    if (!analyticsEndpoint || analyticsDisabled) return;
+    const params = new URLSearchParams(window.location.search);
+    const payload = {
+      eventType,
+      visitorId,
+      sessionId,
+      pagePath: window.location.pathname || '/',
+      pageTitle: document.title.slice(0, 200),
+      targetKey: target ? (target.dataset.conversion || target.id || target.tagName.toLowerCase()).slice(0, 100) : '',
+      targetText: target ? (target.getAttribute('aria-label') || target.textContent || '').trim().replace(/\s+/g, ' ').slice(0, 200) : '',
+      targetHref: target ? safeUrl(target.getAttribute('href')) : '',
+      referrer: safeUrl(document.referrer),
+      utmSource: (params.get('utm_source') || localStorage.getItem('lead_utm_source') || '').slice(0, 100),
+      utmMedium: (params.get('utm_medium') || localStorage.getItem('lead_utm_medium') || '').slice(0, 100),
+      utmCampaign: (params.get('utm_campaign') || localStorage.getItem('lead_utm_campaign') || '').slice(0, 100)
+    };
+    window.fetch(analyticsEndpoint, {
+      method: 'POST',
+      mode: 'cors',
+      credentials: 'omit',
+      keepalive: true,
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    }).catch(function() {});
+  };
+  sendAnalytics('page_view');
+  document.addEventListener('click', function(event) {
+    const target = event.target && event.target.closest
+      ? event.target.closest('a, button, [role="button"], [data-conversion]')
+      : null;
+    if (target) sendAnalytics('click', target);
+  }, true);
+
   const languagePages = {
     'index.html': 'index-en.html', 'products-roboskin.html': 'products-roboskin-en.html',
     'solutions-humanoid.html': 'solutions-humanoid-en.html', 'products.html': 'products-en.html',
