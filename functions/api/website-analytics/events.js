@@ -50,7 +50,11 @@ export async function onRequest({ request }) {
     });
     if (!response.ok) {
       console.error('Analytics upstream failed', response.status);
-      return reply(503, 'Statistics upstream HTTP ' + response.status);
+      const detail = (await response.text()).slice(0, 2048);
+      const reason = /Non-compliance ICP|beian-block|备案/.test(detail)
+        ? ' (origin ICP restriction)'
+        : /error code:\s*\d+/i.exec(detail)?.[0] || '';
+      return reply(503, 'Statistics upstream HTTP ' + response.status + reason);
     }
     return new Response(response.body, {
       status: response.status,
