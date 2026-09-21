@@ -3,20 +3,19 @@
 浏览器通过同域 `/api/website-analytics/events` POST 上报匿名页面浏览和点击。
 Pages Function 将请求转发到客户平台的公开统计接口，不转发 Cookie 或授权头。
 
-## 必需的 DNS 配置
+## 正式接收路径
 
-在 soulbody-studio.com 的 Cloudflare DNS 添加：
+官网浏览器 → 官网 Pages Function → https://pawpark.com.cn/api/website-analytics/events
+→ 客户平台公开统计接口。
 
-- 类型：A
-- 名称：analytics-origin
-- IPv4：120.55.193.185
-- 代理状态：仅 DNS（灰色云朵）
-- TTL：自动
+Pawpark 使用现有域名、HTTPS 证书及服务器 47.98.231.28。
+Nginx 只为该精确路径增加转发，原网站页面继续使用原路由。
+保留原始 Origin，因此数据归属 soulbody-studio.com，不归属 Pawpark。
+服务器间使用现有客户平台 HTTP 接口，仅转发匿名统计，不转发登录凭证。
+原 analytics-origin.soulbody-studio.com 路径因源站备案拦截弃用，无需再依赖该 DNS 记录。
 
-该域名用于 Pages 服务端访问 15666 端口；浏览器仍只访问官网 HTTPS。
-Cloudflare fetch 不支持直接访问 IP，且代理模式不支持这里使用的 15666 端口。
-源站目前使用 HTTP，仅传输现有匿名统计字段，不传输登录凭证。
-不要更改官网根域名或 www 的解析。
+Pawpark 配置：/opt/legendshop/services/nginx/config/legendshopConfig/pawpark-https.conf。
+变更前备份：/opt/legendshop/services/nginx/config/pawpark-https.before-analytics-20260921-1701.bak。
 
 ## 验证
 
