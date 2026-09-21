@@ -1,0 +1,6 @@
+{
+  "name": "soulbody-studio-website",
+  "pages_build_output_dir": ".",
+  "compatibility_date": "2026-09-21",
+  "compatibility_flags": ["allow_custom_ports"]
+}
