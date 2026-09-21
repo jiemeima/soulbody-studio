@@ -32,13 +32,7 @@
   </url>
   <url>
     <loc>https://soulbody-studio.com/about</loc>
-    <lastmod>2026-07-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://soulbody-studio.com/contact</loc>
-    <lastmod>2026-07-06</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -60,11 +54,7 @@
   </url>
   <url>
     <loc>https://soulbody-studio.com/about-en</loc>
-    <lastmod>2026-07-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://soulbody-studio.com/contact-en</loc>
-    <lastmod>2026-07-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+    <lastmod>2026-09-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
   </url>
   <url>
     <loc>https://soulbody-studio.com/faq-en</loc>
@@ -81,6 +71,14 @@
   </url>
   <url><loc>https://soulbody-studio.com/article-why-robots-need-soft-skin</loc><lastmod>2026-07-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority><image:image><image:loc>https://soulbody-studio.com/images/robot-shoulder-yingyun.png</image:loc><image:title>机器人为什么需要软皮肤</image:title></image:image></url>
   <url><loc>https://soulbody-studio.com/article-robot-skin-thermal-design</loc><lastmod>2026-07-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority><image:image><image:loc>https://soulbody-studio.com/images/robot-arm-yingyun-knitted.png</image:loc><image:title>机器人软皮肤散热设计</image:title></image:image></url>
-  <url><loc>https://soulbody-studio.com/article-robot-skin-customization-guide</loc><lastmod>2026-08-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority><image:image><image:loc>https://soulbody-studio.com/images/insights-custom-joint-detail.png</image:loc><image:title>机器人软皮肤定制资料指南</image:title></image:image></url>
-  <url><loc>https://soulbody-studio.com/article-robot-skin-material-comparison</loc><lastmod>2026-08-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority><image:image><image:loc>https://soulbody-studio.com/images/insights-roboskin-back.png</image:loc><image:title>机器人软皮肤与硬质外壳材料对比</image:title></image:image></url>
+  <url><loc>https://soulbody-studio.com/article-robot-skin-customization-guide</loc><lastmod>2026-09-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority><image:image><image:loc>https://soulbody-studio.com/images/insights-custom-joint-detail.png</image:loc><image:title>机器人软皮肤定制资料指南</image:title></image:image></url>
+  <url><loc>https://soulbody-studio.com/article-robot-skin-material-comparison</loc><lastmod>2026-09-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority><image:image><image:loc>https://soulbody-studio.com/images/insights-roboskin-back.png</image:loc><image:title>机器人软皮肤与硬质外壳材料对比</image:title></image:image></url>
+  <url><loc>https://soulbody-studio.com/products-zoned-cover</loc><lastmod>2026-09-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulbody-studio.com/products-dexterous-glove</loc><lastmod>2026-09-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulbody-studio.com/products-functional-textile</loc><lastmod>2026-09-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulbody-studio.com/products-lattice</loc><lastmod>2026-09-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulbody-studio.com/products-zoned-cover-en</loc><lastmod>2026-09-19</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://soulbody-studio.com/products-dexterous-glove-en</loc><lastmod>2026-09-19</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://soulbody-studio.com/products-functional-textile-en</loc><lastmod>2026-09-19</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://soulbody-studio.com/products-lattice-en</loc><lastmod>2026-09-19</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>

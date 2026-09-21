@@ -45,10 +45,10 @@ Language: zh-CN, en
 
 Important engineering boundary: 功能纱线或导电纱线本身不等于整机达到阻燃、抗菌、防水或触觉性能。具体性能需结合材料规格、结构、电路、算法与整机测试验证。
 
-Reference lead time: 资料齐全时，基础外观首版参考周期为 7–15 天；功能方案、多轮测试和特殊后整理另行评估。
+Reference lead time: 资料齐全时，基础外观首版参考周期为 15 天左右；功能方案、多轮测试和特殊后整理另行评估。
 
 ## Contact
 
 - Phone: +86 180 0689 0218
-- Email: sunny.xu@yingyun-link.com
+- Email: info@soulframetech.cn
 - Location: Yiwu, Zhejiang, China

@@ -292,7 +292,7 @@ document.addEventListener('DOMContentLoaded', function() {
       if (!validateLead()) return;
       const company = new FormData(leadForm).get('company');
       const subject = (isEnglish ? 'Roboskin Project Assessment | ' : '机器人软皮肤定制评估｜') + company;
-      window.location.href = 'mailto:sunny.xu@yingyun-link.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(buildLeadText());
+      window.location.href = 'mailto:info@soulframetech.cn?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(buildLeadText());
     });
   }
   if (copyLead) {
