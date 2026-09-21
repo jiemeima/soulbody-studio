@@ -50,7 +50,7 @@ export async function onRequest({ request }) {
     });
     if (!response.ok) {
       console.error('Analytics upstream failed', response.status);
-      return reply(502, 'Statistics upstream HTTP ' + response.status);
+      return reply(503, 'Statistics upstream HTTP ' + response.status);
     }
     return new Response(response.body, {
       status: response.status,
@@ -59,7 +59,8 @@ export async function onRequest({ request }) {
         'Cache-Control': 'no-store',
       },
     });
-  } catch {
-    return reply(502, 'Statistics service unavailable');
+  } catch (error) {
+    console.error('Analytics connection failed', error.message);
+    return reply(503, 'Statistics connection failed: ' + error.message);
   }
 }
