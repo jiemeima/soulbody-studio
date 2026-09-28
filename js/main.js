@@ -386,7 +386,7 @@ document.addEventListener('DOMContentLoaded', function() {
             website: String(data.get('website') || ''),
           }),
         });
-        if (!response.ok) throw new Error('submit failed');
+        if (response.status !== 204) throw new Error('submit failed');
         leadForm.reset();
         pendingSubmissionId = null;
         error.textContent = isEnglish ? 'Submitted successfully. We will contact you soon.' : '提交成功，我们会尽快联系您。';

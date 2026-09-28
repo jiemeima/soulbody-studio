@@ -30,6 +30,11 @@ test('Pages relay forwards only same-origin JSON without visitor cookies', async
     assert.equal(forwarded.options.headers.Origin, 'https://soulbody-studio.com');
     assert.equal(forwarded.options.headers.Cookie, undefined);
     assert.equal(forwarded.options.body, body);
+    globalThis.fetch = async () => new Response('{"code":500}', { status: 200 });
+    const rejected = await onRequest({ request: new Request('https://soulbody-studio.com/api/website-leads', {
+      method: 'POST', headers: { Origin: 'https://soulbody-studio.com', 'Content-Type': 'application/json' }, body,
+    }) });
+    assert.equal(rejected.status, 502);
   } finally {
     globalThis.fetch = originalFetch;
   }

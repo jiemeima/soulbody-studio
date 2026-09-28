@@ -15,7 +15,7 @@ export async function onRequest({ request }) {
       method: 'POST', headers: { 'Content-Type': 'application/json', Origin: origin },
       body, redirect: 'manual', signal: AbortSignal.timeout(10000),
     });
-    return new Response(null, { status: response.status, headers: { 'Cache-Control': 'no-store' } });
+    return new Response(null, { status: response.status === 204 ? 204 : 502, headers: { 'Cache-Control': 'no-store' } });
   } catch {
     return new Response(null, { status: 503, headers: { 'Cache-Control': 'no-store' } });
   }
