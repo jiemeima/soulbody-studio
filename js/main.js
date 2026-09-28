@@ -321,7 +321,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
   
-  // 静态站需求表单：整理为邮件，同时保留复制兜底
+  // 只有服务端确认保存成功，才算一次咨询。复制文本不计入线索。
   const leadForm = document.getElementById('lead-form');
   const copyLead = document.getElementById('copy-lead');
   const buildLeadText = function() {
@@ -354,12 +354,47 @@ document.addEventListener('DOMContentLoaded', function() {
     return true;
   };
   if (leadForm) {
-    leadForm.addEventListener('submit', function(e) {
+    let pendingSubmissionId = null;
+    leadForm.addEventListener('submit', async function(e) {
       e.preventDefault();
       if (!validateLead()) return;
-      const company = new FormData(leadForm).get('company');
-      const subject = (isEnglish ? 'Roboskin Project Assessment | ' : '机器人软皮肤定制评估｜') + company;
-      window.location.href = 'mailto:info@soulframetech.cn?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(buildLeadText());
+      const data = new FormData(leadForm);
+      const button = leadForm.querySelector('button[type="submit"]');
+      const error = leadForm.querySelector('.lead-form-error');
+      button.disabled = true;
+      try {
+        const response = await fetch('/api/website-leads', {
+          method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            submissionId: pendingSubmissionId ||= crypto.randomUUID(),
+            companyName: String(data.get('company') || ''),
+            contactName: String(data.get('name') || ''),
+            phone: String(data.get('phone') || ''),
+            email: String(data.get('email') || ''),
+            inquiry: [
+              '机器人类型：' + String(data.get('robotType') || ''),
+              '预计数量：' + String(data.get('quantity') || ''),
+              String(data.get('requirements') || ''),
+            ].join('\n').slice(0, 5000),
+            pagePath: location.pathname,
+            visitorId: localStorage.getItem('website_analytics_visitor_id') || undefined,
+            sessionId: sessionStorage.getItem('website_analytics_session_id') || undefined,
+            utmSource: localStorage.getItem('lead_utm_source') || undefined,
+            utmMedium: localStorage.getItem('lead_utm_medium') || undefined,
+            utmCampaign: localStorage.getItem('lead_utm_campaign') || undefined,
+            consent: data.get('consent') === 'on',
+            website: String(data.get('website') || ''),
+          }),
+        });
+        if (!response.ok) throw new Error('submit failed');
+        leadForm.reset();
+        pendingSubmissionId = null;
+        error.textContent = isEnglish ? 'Submitted successfully. We will contact you soon.' : '提交成功，我们会尽快联系您。';
+      } catch {
+        error.textContent = isEnglish ? 'Submission failed. Please try again or copy the details and email us.' : '提交失败，请稍后重试；也可复制需求后通过邮件联系。';
+      } finally {
+        button.disabled = false;
+      }
     });
   }
   if (copyLead) {

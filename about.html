@@ -129,11 +129,12 @@
           <div class="lead-form-row"><label>公司 / 机构名称<input type="text" name="company" autocomplete="organization" placeholder="例如：某某机器人科技" required></label><label>联系人<input type="text" name="name" autocomplete="name" placeholder="您的姓名" required></label></div>
           <div class="lead-form-row"><label>联系电话<input type="tel" name="phone" autocomplete="tel" inputmode="tel" placeholder="手机或微信同号" required></label><label>联系邮箱<input type="email" name="email" autocomplete="email" placeholder="用于接收评估回复"></label></div>
           <div class="lead-form-row"><label>机器人类型<select name="robotType" required><option value="">请选择</option><option>人形 / 具身机器人</option><option>服务 / 导览机器人</option><option>医疗康复 / 外骨骼</option><option>灵巧手 / 触觉研究</option><option>工业 / 巡检机器人</option><option>展演 / 品牌活动</option><option>其他</option></select></label><label>预计数量<select name="quantity"><option>尚未确定</option><option>1–5 件研发样品</option><option>6–99 件小批量</option><option>100–1,000 件</option><option>1,000 件以上</option></select></label></div>
-          <label>需求说明<textarea name="requirements" rows="5" placeholder="机器人型号、使用场景、包覆部位、功能要求与期望时间；照片或三维文件可在邮件中补充。" required></textarea></label>
+            <label>需求说明<textarea name="requirements" rows="5" maxlength="4000" placeholder="机器人型号、使用场景、包覆部位、功能要求与期望时间；照片或三维文件可在邮件中补充。" required></textarea></label>
           <label class="lead-consent"><input type="checkbox" name="consent" required><span>同意灵躯工纺仅将以上信息用于本次需求沟通。</span></label>
           <p class="lead-form-error" role="alert" aria-live="polite"></p>
-          <div class="lead-form-actions"><button type="submit" class="btn btn-primary">整理需求并发送邮件</button><button type="button" class="lead-copy-btn" id="copy-lead">复制需求内容</button></div>
-          <p class="lead-form-note">提交后将打开邮件客户端，收件人为 info@soulframetech.cn；通常 1 个工作日内回复。</p>
+          <input name="website" type="text" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
+          <div class="lead-form-actions"><button type="submit" class="btn btn-primary">提交咨询需求</button><button type="button" class="lead-copy-btn" id="copy-lead">复制需求内容</button></div>
+          <p class="lead-form-note">提交成功后我们会尽快联系您；信息仅用于本次需求沟通。</p>
         </form>
       </div>
     </div>
